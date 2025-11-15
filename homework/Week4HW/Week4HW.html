@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.21">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Ben Akyrueklier">
+<meta name="dcterms.date" content="2025-09-18">
+
+<title>Week 4 HW</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="Week4HW_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Week4HW_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="Week4HW_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="Week4HW_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="Week4HW_files/libs/quarto-html/popper.min.js"></script>
+<script src="Week4HW_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Week4HW_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Week4HW_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Week4HW_files/libs/quarto-html/quarto-syntax-highlighting-ea1d7ac60288e0f1efdbc993fd8432ae.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Week4HW_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Week4HW_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Week4HW_files/libs/bootstrap/bootstrap-d6a003b94517c951b2d65075d42fb01b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Week 4 HW</h1>
+</div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Ben Akyrueklier <a href="mailto:ben.akyureklier@gwu.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            George Washington University
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 18, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div id="d0515a74-bb83-4550-8f5f-a9095d580cb4" class="cell" data-execution_count="234">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> altair <span class="im">as</span> alt</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.datasets <span class="im">import</span> load_iris</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div id="751d2a24-5bc9-4c3e-a915-2ff7a2f4e5b5" class="cell" data-execution_count="235">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>wb <span class="op">=</span> pd.read_csv(<span class="st">"Data/WBnew.csv"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>new_column_names <span class="op">=</span> {<span class="st">'2015 [YR2015]'</span>: <span class="st">'2015'</span>, <span class="st">'2016 [YR2016]'</span>: <span class="st">'2016'</span>, <span class="st">'2017 [YR2017]'</span>: <span class="st">'2017'</span>, <span class="st">'2018 [YR2018]'</span>: <span class="st">'2018'</span>, <span class="st">'2019 [YR2019]'</span>: <span class="st">'2019'</span>}</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>wb1519 <span class="op">=</span> wb.rename(columns<span class="op">=</span>new_column_names)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>wb1519 <span class="op">=</span> wb1519.drop(columns<span class="op">=</span>[<span class="st">'2005 [YR2005]'</span>, <span class="st">'2006 [YR2006]'</span>, <span class="st">'2007 [YR2007]'</span>, <span class="st">'2008 [YR2008]'</span>, <span class="st">'2009 [YR2009]'</span>, <span class="st">'2010 [YR2010]'</span>, <span class="st">'2011 [YR2011]'</span>, <span class="st">'2012 [YR2012]'</span>, <span class="st">'2013 [YR2013]'</span>, <span class="st">'2014 [YR2014]'</span>, <span class="st">'2020 [YR2020]'</span>, <span class="st">'2021 [YR2021]'</span>, <span class="st">'2022 [YR2022]'</span>, <span class="st">'2023 [YR2023]'</span>, <span class="st">'2024 [YR2024]'</span>])</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>wb1519.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="235">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Country Name</th>
+<th data-quarto-table-cell-role="th">Country Code</th>
+<th data-quarto-table-cell-role="th">Series Name</th>
+<th data-quarto-table-cell-role="th">Series Code</th>
+<th data-quarto-table-cell-role="th">2015</th>
+<th data-quarto-table-cell-role="th">2016</th>
+<th data-quarto-table-cell-role="th">2017</th>
+<th data-quarto-table-cell-role="th">2018</th>
+<th data-quarto-table-cell-role="th">2019</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>Afghanistan</td>
+<td>AFG</td>
+<td>GDP per capita (current US$)</td>
+<td>NY.GDP.PCAP.CD</td>
+<td>565.569730408751</td>
+<td>522.082215583898</td>
+<td>525.469770891619</td>
+<td>491.337221382603</td>
+<td>496.6025042585</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>Afghanistan</td>
+<td>AFG</td>
+<td>Hospital beds (per 1,000 people)</td>
+<td>SH.MED.BEDS.ZS</td>
+<td>0.44</td>
+<td>0.45</td>
+<td>0.42</td>
+<td>0.4</td>
+<td>0.38</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>Afghanistan</td>
+<td>AFG</td>
+<td>Life expectancy at birth, total (years)</td>
+<td>SP.DYN.LE00.IN</td>
+<td>62.27</td>
+<td>62.646</td>
+<td>62.406</td>
+<td>62.443</td>
+<td>62.941</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>Afghanistan</td>
+<td>AFG</td>
+<td>Net migration</td>
+<td>SM.POP.NETM</td>
+<td>-286314</td>
+<td>-143049</td>
+<td>-71491</td>
+<td>-36753</td>
+<td>9159</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>Afghanistan</td>
+<td>AFG</td>
+<td>Secure Internet servers (per 1 million people)</td>
+<td>IT.NET.SECR.P6</td>
+<td>2.18729357416894</td>
+<td>12.2764405423167</td>
+<td>44.1873650754779</td>
+<td>53.4795175761047</td>
+<td>27.6573503133086</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="1858d03e-08da-485d-be1a-b61dcfbbbf33" class="cell" data-scrolled="true" data-execution_count="236">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>wbmelt <span class="op">=</span> pd.melt(wb1519, id_vars<span class="op">=</span>[<span class="st">'Country Name'</span>,<span class="st">'Series Name'</span>], value_vars<span class="op">=</span>[<span class="st">'2015'</span>, <span class="st">'2016'</span>, <span class="st">'2017'</span>, <span class="st">'2018'</span>, <span class="st">'2019'</span>], var_name<span class="op">=</span><span class="st">'Year'</span>, value_name<span class="op">=</span><span class="st">'Value'</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>wbmelt <span class="op">=</span> wbmelt.dropna()</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>wbpivot <span class="op">=</span> wbmelt.pivot(index<span class="op">=</span>[<span class="st">'Country Name'</span>, <span class="st">'Year'</span>], columns<span class="op">=</span><span class="st">'Series Name'</span>, values<span class="op">=</span><span class="st">'Value'</span>).reset_index()</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>wbpivot <span class="op">=</span> wbpivot.dropna(axis<span class="op">=</span><span class="dv">1</span>, how<span class="op">=</span><span class="st">'all'</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>wbpivot.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="236">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">Series Name</th>
+<th data-quarto-table-cell-role="th">Country Name</th>
+<th data-quarto-table-cell-role="th">Year</th>
+<th data-quarto-table-cell-role="th">GDP per capita (current US$)</th>
+<th data-quarto-table-cell-role="th">Hospital beds (per 1,000 people)</th>
+<th data-quarto-table-cell-role="th">Income share held by highest 10%</th>
+<th data-quarto-table-cell-role="th">Life expectancy at birth, total (years)</th>
+<th data-quarto-table-cell-role="th">Net migration</th>
+<th data-quarto-table-cell-role="th">Real interest rate (%)</th>
+<th data-quarto-table-cell-role="th">Researchers in R&amp;D (per million people)</th>
+<th data-quarto-table-cell-role="th">Secure Internet servers (per 1 million people)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>Afghanistan</td>
+<td>2015</td>
+<td>565.569730408751</td>
+<td>0.44</td>
+<td>..</td>
+<td>62.27</td>
+<td>-286314</td>
+<td>12.2525481629518</td>
+<td>..</td>
+<td>2.18729357416894</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>Afghanistan</td>
+<td>2016</td>
+<td>522.082215583898</td>
+<td>0.45</td>
+<td>..</td>
+<td>62.646</td>
+<td>-143049</td>
+<td>17.5839381624543</td>
+<td>..</td>
+<td>12.2764405423167</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>Afghanistan</td>
+<td>2017</td>
+<td>525.469770891619</td>
+<td>0.42</td>
+<td>..</td>
+<td>62.406</td>
+<td>-71491</td>
+<td>12.1411782956513</td>
+<td>..</td>
+<td>44.1873650754779</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>Afghanistan</td>
+<td>2018</td>
+<td>491.337221382603</td>
+<td>0.4</td>
+<td>..</td>
+<td>62.443</td>
+<td>-36753</td>
+<td>..</td>
+<td>..</td>
+<td>53.4795175761047</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>Afghanistan</td>
+<td>2019</td>
+<td>496.6025042585</td>
+<td>0.38</td>
+<td>..</td>
+<td>62.941</td>
+<td>9159</td>
+<td>..</td>
+<td>..</td>
+<td>27.6573503133086</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="2dba1b04-98dd-4297-aee9-6161e9fede92" class="cell" data-execution_count="237">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>wbEU <span class="op">=</span> wbpivot[wbpivot[<span class="st">'Country Name'</span>].isin([<span class="st">'Germany'</span>, <span class="st">'France'</span>, <span class="st">'Italy'</span>, <span class="st">'Romania'</span>, <span class="st">'Portugal'</span>, <span class="st">'Finland'</span>, <span class="st">'Belgium'</span>])]</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>wbEU[<span class="st">'Researchers in R&amp;D (per million people)'</span>] <span class="op">=</span> pd.to_numeric(wbEU[<span class="st">'Researchers in R&amp;D (per million people)'</span>])</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>RDpivot <span class="op">=</span> wbEU.pivot(index<span class="op">=</span><span class="st">'Year'</span>, columns<span class="op">=</span><span class="st">'Country Name'</span>, values<span class="op">=</span><span class="st">'Researchers in R&amp;D (per million people)'</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">6</span>))</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>RDpivot.plot(marker<span class="op">=</span><span class="st">'o'</span>, title<span class="op">=</span><span class="st">"Researchers per Million People Across 5 Years"</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Year"</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Researchers in R&amp;D (per million people)"</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">'upper left'</span>, bbox_to_anchor<span class="op">=</span>(<span class="fl">1.0</span>, <span class="fl">1.0</span>))</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>/var/folders/9b/bb7yf3dj4qzbc23czfb1z3rh0000gn/T/ipykernel_90174/3833595271.py:2: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  wbEU['Researchers in R&amp;D (per million people)'] = pd.to_numeric(wbEU['Researchers in R&amp;D (per million people)'])</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre><code>&lt;Figure size 1000x600 with 0 Axes&gt;</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Week4HW_files/figure-html/cell-5-output-3.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="8b93c8b6-c866-479c-9fb4-593b1f332c3d" class="cell" data-execution_count="238">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>wbpivot[<span class="st">'Life expectancy at birth, total (years)'</span>] <span class="op">=</span> pd.to_numeric(wbpivot[<span class="st">'Life expectancy at birth, total (years)'</span>])</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>yravg <span class="op">=</span> wbpivot.groupby(<span class="st">"Year"</span>)[<span class="st">"Life expectancy at birth, total (years)"</span>].mean().reset_index(name<span class="op">=</span><span class="st">"Average Life Expectancy"</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>yravg.plot(x<span class="op">=</span><span class="st">"Year"</span>, y<span class="op">=</span><span class="st">"Average Life Expectancy"</span>, kind<span class="op">=</span><span class="st">"bar"</span>, title<span class="op">=</span><span class="st">"Average Life Expectancy (2015-2019)"</span>, legend<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Life expectancy at birth (years)"</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>yravg.plot(x<span class="op">=</span><span class="st">"Year"</span>, y<span class="op">=</span><span class="st">"Average Life Expectancy"</span>, kind<span class="op">=</span><span class="st">"bar"</span>, title<span class="op">=</span><span class="st">"Average Life Expectancy (2015-2019)"</span>, legend<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="dv">71</span>, <span class="dv">74</span>)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Life expectancy at birth (years)"</span>)</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Week4HW_files/figure-html/cell-6-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Week4HW_files/figure-html/cell-6-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="57231793-3e33-4e89-b74e-a237ec47c3ec" class="cell" data-execution_count="239">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>wbpivot[<span class="st">'Hospital beds (per 1,000 people)'</span>] <span class="op">=</span> pd.to_numeric(wbpivot[<span class="st">'Hospital beds (per 1,000 people)'</span>], errors<span class="op">=</span><span class="st">'coerce'</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>healthAgg <span class="op">=</span> wbpivot.groupby(<span class="st">"Country Name"</span>)[[<span class="st">"Life expectancy at birth, total (years)"</span>, <span class="st">"Hospital beds (per 1,000 people)"</span>]].mean().reset_index()</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>alt.Chart(healthAgg).mark_circle().encode(</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">'Hospital beds (per 1,000 people):Q'</span>,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span><span class="st">'Life expectancy at birth, total (years):Q'</span>,</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    tooltip<span class="op">=</span>[<span class="st">'Country Name'</span>,<span class="st">'Life expectancy at birth, total (years)'</span>,<span class="st">'Hospital beds (per 1,000 people)'</span>]</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>).interactive().properties(title<span class="op">=</span><span class="st">'Life Expectancy vs Hospital Beds (2015-2019 Average)'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>/opt/anaconda3/lib/python3.10/site-packages/altair/utils/core.py:395: FutureWarning: the convert_dtype parameter is deprecated and will be removed in a future version.  Do ``ser.astype(object).apply()`` instead if you want ``convert_dtype=False``.
+  col = df[col_name].apply(to_list_if_array, convert_dtype=False)</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="239">
+
+<style>
+  #altair-viz-c0a2d2494d1b425ca016efcaf66b95f0.vega-embed {
+    width: 100%;
+    display: flex;
+  }
+
+  #altair-viz-c0a2d2494d1b425ca016efcaf66b95f0.vega-embed details,
+  #altair-viz-c0a2d2494d1b425ca016efcaf66b95f0.vega-embed details summary {
+    position: relative;
+  }
+</style>
+<div id="altair-viz-c0a2d2494d1b425ca016efcaf66b95f0"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-c0a2d2494d1b425ca016efcaf66b95f0") {
+      outputDiv = document.getElementById("altair-viz-c0a2d2494d1b425ca016efcaf66b95f0");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@5.8.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "5.8.0"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-4093f6ac45490501e4035c09a5634bfc"}, "mark": {"type": "circle"}, "encoding": {"tooltip": [{"field": "Country Name", "type": "nominal"}, {"field": "Life expectancy at birth, total (years)", "type": "quantitative"}, {"field": "Hospital beds (per 1,000 people)", "type": "quantitative"}], "x": {"field": "Hospital beds (per 1,000 people)", "type": "quantitative"}, "y": {"field": "Life expectancy at birth, total (years)", "type": "quantitative"}}, "params": [{"name": "param_11", "select": {"type": "interval", "encodings": ["x", "y"]}, "bind": "scales"}], "title": "Life Expectancy vs Hospital Beds (2015-2019 Average)", "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-4093f6ac45490501e4035c09a5634bfc": [{"Country Name": "Afghanistan", "Life expectancy at birth, total (years)": 62.5412, "Hospital beds (per 1,000 people)": 0.418}, {"Country Name": "Albania", "Life expectancy at birth, total (years)": 78.9212, "Hospital beds (per 1,000 people)": 2.844}, {"Country Name": "Algeria", "Life expectancy at birth, total (years)": 75.4274, "Hospital beds (per 1,000 people)": 1.63}, {"Country Name": "American Samoa", "Life expectancy at birth, total (years)": 72.728, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Andorra", "Life expectancy at birth, total (years)": 84.34400000000001, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Angola", "Life expectancy at birth, total (years)": 62.0912, "Hospital beds (per 1,000 people)": 0.75}, {"Country Name": "Antigua and Barbuda", "Life expectancy at birth, total (years)": 77.038, "Hospital beds (per 1,000 people)": 3.5366666666666666}, {"Country Name": "Argentina", "Life expectancy at birth, total (years)": 76.57300000000001, "Hospital beds (per 1,000 people)": 4.476}, {"Country Name": "Armenia", "Life expectancy at birth, total (years)": 75.35951219512197, "Hospital beds (per 1,000 people)": 4.308}, {"Country Name": "Aruba", "Life expectancy at birth, total (years)": 75.6928, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Australia", "Life expectancy at birth, total (years)": 82.59951219512196, "Hospital beds (per 1,000 people)": 3.83}, {"Country Name": "Austria", "Life expectancy at birth, total (years)": 81.61268292682928, "Hospital beds (per 1,000 people)": 7.358}, {"Country Name": "Azerbaijan", "Life expectancy at birth, total (years)": 72.7834, "Hospital beds (per 1,000 people)": 3.9799999999999995}, {"Country Name": "Bahamas, The", "Life expectancy at birth, total (years)": 73.4696, "Hospital beds (per 1,000 people)": 2.785}, {"Country Name": "Bahrain", "Life expectancy at birth, total (years)": 80.407, "Hospital beds (per 1,000 people)": 1.81}, {"Country Name": "Bangladesh", "Life expectancy at birth, total (years)": 71.5942, "Hospital beds (per 1,000 people)": 0.836}, {"Country Name": "Barbados", "Life expectancy at birth, total (years)": 76.26660000000001, "Hospital beds (per 1,000 people)": 5.994}, {"Country Name": "Belarus", "Life expectancy at birth, total (years)": 73.99658536585369, "Hospital beds (per 1,000 people)": 9.808}, {"Country Name": "Belgium", "Life expectancy at birth, total (years)": 81.5029268292683, "Hospital beds (per 1,000 people)": 5.6899999999999995}, {"Country Name": "Belize", "Life expectancy at birth, total (years)": 72.09020000000001, "Hospital beds (per 1,000 people)": 0.9924999999999999}, {"Country Name": "Benin", "Life expectancy at birth, total (years)": 59.5064, "Hospital beds (per 1,000 people)": 0.438}, {"Country Name": "Bermuda", "Life expectancy at birth, total (years)": 80.7474, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Bhutan", "Life expectancy at birth, total (years)": 71.40899999999999, "Hospital beds (per 1,000 people)": 1.782}, {"Country Name": "Bolivia", "Life expectancy at birth, total (years)": 67.5304, "Hospital beds (per 1,000 people)": 1.232}, {"Country Name": "Bosnia and Herzegovina", "Life expectancy at birth, total (years)": 77.3836, "Hospital beds (per 1,000 people)": 2.372}, {"Country Name": "Botswana", "Life expectancy at birth, total (years)": 65.2986, "Hospital beds (per 1,000 people)": 2.394}, {"Country Name": "Brazil", "Life expectancy at birth, total (years)": 75.4024, "Hospital beds (per 1,000 people)": 2.2939999999999996}, {"Country Name": "British Virgin Islands", "Life expectancy at birth, total (years)": 76.485, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Brunei Darussalam", "Life expectancy at birth, total (years)": 74.9538, "Hospital beds (per 1,000 people)": 3.338}, {"Country Name": "Bulgaria", "Life expectancy at birth, total (years)": 74.86341463414637, "Hospital beds (per 1,000 people)": 7.346000000000001}, {"Country Name": "Burkina Faso", "Life expectancy at birth, total (years)": 59.537, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Burundi", "Life expectancy at birth, total (years)": 61.2454, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Cabo Verde", "Life expectancy at birth, total (years)": 74.689, "Hospital beds (per 1,000 people)": 1.9249999999999998}, {"Country Name": "Cambodia", "Life expectancy at birth, total (years)": 69.799, "Hospital beds (per 1,000 people)": 0.8300000000000001}, {"Country Name": "Cameroon", "Life expectancy at birth, total (years)": 60.7362, "Hospital beds (per 1,000 people)": 2.65}, {"Country Name": "Canada", "Life expectancy at birth, total (years)": 81.91024390243903, "Hospital beds (per 1,000 people)": 2.568}, {"Country Name": "Cayman Islands", "Life expectancy at birth, total (years)": 78.5976, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Central African Republic", "Life expectancy at birth, total (years)": 46.398199999999996, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Chad", "Life expectancy at birth, total (years)": 52.0476, "Hospital beds (per 1,000 people)": 0.47}, {"Country Name": "Channel Islands", "Life expectancy at birth, total (years)": 81.17999999999999, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Chile", "Life expectancy at birth, total (years)": 80.3592, "Hospital beds (per 1,000 people)": 2.102}, {"Country Name": "China", "Life expectancy at birth, total (years)": 77.4146, "Hospital beds (per 1,000 people)": 4.33}, {"Country Name": "Colombia", "Life expectancy at birth, total (years)": 76.417, "Hospital beds (per 1,000 people)": 1.7120000000000002}, {"Country Name": "Comoros", "Life expectancy at birth, total (years)": 65.091, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Congo, Dem. Rep.", "Life expectancy at birth, total (years)": 59.480399999999996, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Congo, Rep.", "Life expectancy at birth, total (years)": 63.879999999999995, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Costa Rica", "Life expectancy at birth, total (years)": 80.155, "Hospital beds (per 1,000 people)": 1.124}, {"Country Name": "Cote d'Ivoire", "Life expectancy at birth, total (years)": 59.2958, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Croatia", "Life expectancy at birth, total (years)": 77.81365853658538, "Hospital beds (per 1,000 people)": 5.497999999999999}, {"Country Name": "Cuba", "Life expectancy at birth, total (years)": 77.491, "Hospital beds (per 1,000 people)": 4.1259999999999994}, {"Country Name": "Curacao", "Life expectancy at birth, total (years)": 76.44239999999999, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Cyprus", "Life expectancy at birth, total (years)": 81.5102, "Hospital beds (per 1,000 people)": 2.346}, {"Country Name": "Czechia", "Life expectancy at birth, total (years)": 78.96829268292683, "Hospital beds (per 1,000 people)": 6.676}, {"Country Name": "Denmark", "Life expectancy at birth, total (years)": 81.01268292682929, "Hospital beds (per 1,000 people)": 2.596}, {"Country Name": "Djibouti", "Life expectancy at birth, total (years)": 63.67280000000001, "Hospital beds (per 1,000 people)": 1.4}, {"Country Name": "Dominica", "Life expectancy at birth, total (years)": 70.492, "Hospital beds (per 1,000 people)": 3.3619999999999997}, {"Country Name": "Dominican Republic", "Life expectancy at birth, total (years)": 73.1816, "Hospital beds (per 1,000 people)": 1.374}, {"Country Name": "Ecuador", "Life expectancy at birth, total (years)": 76.614, "Hospital beds (per 1,000 people)": 1.422}, {"Country Name": "Egypt, Arab Rep.", "Life expectancy at birth, total (years)": 70.6936, "Hospital beds (per 1,000 people)": 1.264}, {"Country Name": "El Salvador", "Life expectancy at birth, total (years)": 71.1952, "Hospital beds (per 1,000 people)": 1.058}, {"Country Name": "Equatorial Guinea", "Life expectancy at birth, total (years)": 61.4818, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Eritrea", "Life expectancy at birth, total (years)": 66.6096, "Hospital beds (per 1,000 people)": 1.1039999999999999}, {"Country Name": "Estonia", "Life expectancy at birth, total (years)": 78.04292682926832, "Hospital beds (per 1,000 people)": 4.636}, {"Country Name": "Eswatini", "Life expectancy at birth, total (years)": 57.46, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Ethiopia", "Life expectancy at birth, total (years)": 64.70360000000001, "Hospital beds (per 1,000 people)": 0.315}, {"Country Name": "Faroe Islands", "Life expectancy at birth, total (years)": 82.13317073170734, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Fiji", "Life expectancy at birth, total (years)": 66.8342, "Hospital beds (per 1,000 people)": 1.8866666666666667}, {"Country Name": "Finland", "Life expectancy at birth, total (years)": 81.65170731707317, "Hospital beds (per 1,000 people)": 3.7920000000000003}, {"Country Name": "France", "Life expectancy at birth, total (years)": 82.59463414634148, "Hospital beds (per 1,000 people)": 6.242}, {"Country Name": "French Polynesia", "Life expectancy at birth, total (years)": 82.7696, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Gabon", "Life expectancy at birth, total (years)": 66.82300000000001, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Gambia, The", "Life expectancy at birth, total (years)": 63.705200000000005, "Hospital beds (per 1,000 people)": 1.0033333333333332}, {"Country Name": "Georgia", "Life expectancy at birth, total (years)": 73.5924, "Hospital beds (per 1,000 people)": 3.9859999999999998}, {"Country Name": "Germany", "Life expectancy at birth, total (years)": 80.9619512195122, "Hospital beds (per 1,000 people)": 8.01}, {"Country Name": "Ghana", "Life expectancy at birth, total (years)": 63.823800000000006, "Hospital beds (per 1,000 people)": 0.69}, {"Country Name": "Gibraltar", "Life expectancy at birth, total (years)": 82.8956, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Greece", "Life expectancy at birth, total (years)": 81.4278048780488, "Hospital beds (per 1,000 people)": 4.234}, {"Country Name": "Greenland", "Life expectancy at birth, total (years)": 71.83234146341464, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Grenada", "Life expectancy at birth, total (years)": 74.9904, "Hospital beds (per 1,000 people)": 3.24}, {"Country Name": "Guam", "Life expectancy at birth, total (years)": 76.5124, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Guatemala", "Life expectancy at birth, total (years)": 71.3696, "Hospital beds (per 1,000 people)": 0.4875}, {"Country Name": "Guinea", "Life expectancy at birth, total (years)": 58.705200000000005, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Guinea-Bissau", "Life expectancy at birth, total (years)": 61.1302, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Guyana", "Life expectancy at birth, total (years)": 68.44539999999999, "Hospital beds (per 1,000 people)": 1.8240000000000003}, {"Country Name": "Haiti", "Life expectancy at birth, total (years)": 63.7572, "Hospital beds (per 1,000 people)": 5.0649999999999995}, {"Country Name": "Honduras", "Life expectancy at birth, total (years)": 71.7736, "Hospital beds (per 1,000 people)": 0.632}, {"Country Name": "Hong Kong SAR, China", "Life expectancy at birth, total (years)": 84.63707317073174, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Hungary", "Life expectancy at birth, total (years)": 75.9668292682927, "Hospital beds (per 1,000 people)": 6.973999999999999}, {"Country Name": "Iceland", "Life expectancy at birth, total (years)": 82.67170731707316, "Hospital beds (per 1,000 people)": 2.996}, {"Country Name": "India", "Life expectancy at birth, total (years)": 70.0528, "Hospital beds (per 1,000 people)": 1.666}, {"Country Name": "Indonesia", "Life expectancy at birth, total (years)": 69.92699999999999, "Hospital beds (per 1,000 people)": 1.136}, {"Country Name": "Iran, Islamic Rep.", "Life expectancy at birth, total (years)": 76.3868, "Hospital beds (per 1,000 people)": 1.884}, {"Country Name": "Iraq", "Life expectancy at birth, total (years)": 70.1618, "Hospital beds (per 1,000 people)": 1.1960000000000002}, {"Country Name": "Ireland", "Life expectancy at birth, total (years)": 82.03414634146344, "Hospital beds (per 1,000 people)": 2.96}, {"Country Name": "Isle of Man", "Life expectancy at birth, total (years)": 80.5036, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Israel", "Life expectancy at birth, total (years)": 82.52341463414635, "Hospital beds (per 1,000 people)": 3.1399999999999997}, {"Country Name": "Italy", "Life expectancy at birth, total (years)": 83.11560975609758, "Hospital beds (per 1,000 people)": 3.192}, {"Country Name": "Jamaica", "Life expectancy at birth, total (years)": 71.8566, "Hospital beds (per 1,000 people)": 1.718}, {"Country Name": "Japan", "Life expectancy at birth, total (years)": 84.08917073170731, "Hospital beds (per 1,000 people)": 13.038}, {"Country Name": "Jordan", "Life expectancy at birth, total (years)": 76.00739999999999, "Hospital beds (per 1,000 people)": 1.396}, {"Country Name": "Kazakhstan", "Life expectancy at birth, total (years)": 72.9192, "Hospital beds (per 1,000 people)": 5.432}, {"Country Name": "Kenya", "Life expectancy at birth, total (years)": 62.6588, "Hospital beds (per 1,000 people)": 1.33}, {"Country Name": "Kiribati", "Life expectancy at birth, total (years)": 65.81800000000001, "Hospital beds (per 1,000 people)": 1.88}, {"Country Name": "Korea, Dem. People's Rep.", "Life expectancy at birth, total (years)": 72.9556, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Korea, Rep.", "Life expectancy at birth, total (years)": 82.55609756097562, "Hospital beds (per 1,000 people)": 12.134}, {"Country Name": "Kosovo", "Life expectancy at birth, total (years)": 76.8486, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Kuwait", "Life expectancy at birth, total (years)": 80.20926829268294, "Hospital beds (per 1,000 people)": 2.052}, {"Country Name": "Kyrgyz Republic", "Life expectancy at birth, total (years)": 71.16048780487804, "Hospital beds (per 1,000 people)": 4.39}, {"Country Name": "Lao PDR", "Life expectancy at birth, total (years)": 67.3104, "Hospital beds (per 1,000 people)": 1.422}, {"Country Name": "Latvia", "Life expectancy at birth, total (years)": 74.77219512195123, "Hospital beds (per 1,000 people)": 5.55}, {"Country Name": "Lebanon", "Life expectancy at birth, total (years)": 78.2488, "Hospital beds (per 1,000 people)": 2.8579999999999997}, {"Country Name": "Lesotho", "Life expectancy at birth, total (years)": 53.6998, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Liberia", "Life expectancy at birth, total (years)": 60.547799999999995, "Hospital beds (per 1,000 people)": 1.135}, {"Country Name": "Libya", "Life expectancy at birth, total (years)": 72.4512, "Hospital beds (per 1,000 people)": 3.4}, {"Country Name": "Liechtenstein", "Life expectancy at birth, total (years)": 83.1726829268293, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Lithuania", "Life expectancy at birth, total (years)": 75.28731707317077, "Hospital beds (per 1,000 people)": 6.45}, {"Country Name": "Luxembourg", "Life expectancy at birth, total (years)": 82.40146341463415, "Hospital beds (per 1,000 people)": 4.64}, {"Country Name": "Macao SAR, China", "Life expectancy at birth, total (years)": 83.52682926829269, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Madagascar", "Life expectancy at birth, total (years)": 63.4442, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Malawi", "Life expectancy at birth, total (years)": 63.772000000000006, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Malaysia", "Life expectancy at birth, total (years)": 75.567, "Hospital beds (per 1,000 people)": 1.908}, {"Country Name": "Maldives", "Life expectancy at birth, total (years)": 79.1776, "Hospital beds (per 1,000 people)": 5.228}, {"Country Name": "Mali", "Life expectancy at birth, total (years)": 58.55799999999999, "Hospital beds (per 1,000 people)": 0.2425}, {"Country Name": "Malta", "Life expectancy at birth, total (years)": 82.3209756097561, "Hospital beds (per 1,000 people)": 4.351999999999999}, {"Country Name": "Marshall Islands", "Life expectancy at birth, total (years)": 65.6718, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Mauritania", "Life expectancy at birth, total (years)": 67.0936, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Mauritius", "Life expectancy at birth, total (years)": 74.3829756097561, "Hospital beds (per 1,000 people)": 3.532}, {"Country Name": "Mexico", "Life expectancy at birth, total (years)": 74.3798, "Hospital beds (per 1,000 people)": 0.9879999999999999}, {"Country Name": "Micronesia, Fed. Sts.", "Life expectancy at birth, total (years)": 65.7564, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Moldova", "Life expectancy at birth, total (years)": 70.2178, "Hospital beds (per 1,000 people)": 5.784000000000001}, {"Country Name": "Monaco", "Life expectancy at birth, total (years)": 85.8132, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Mongolia", "Life expectancy at birth, total (years)": 70.69156097560975, "Hospital beds (per 1,000 people)": 7.686}, {"Country Name": "Montenegro", "Life expectancy at birth, total (years)": 76.87951219512196, "Hospital beds (per 1,000 people)": 3.8379999999999996}, {"Country Name": "Morocco", "Life expectancy at birth, total (years)": 73.5842, "Hospital beds (per 1,000 people)": 0.9750000000000001}, {"Country Name": "Mozambique", "Life expectancy at birth, total (years)": 60.081999999999994, "Hospital beds (per 1,000 people)": 0.758}, {"Country Name": "Myanmar", "Life expectancy at birth, total (years)": 65.90520000000001, "Hospital beds (per 1,000 people)": 1.052}, {"Country Name": "Namibia", "Life expectancy at birth, total (years)": 61.7208, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Nauru", "Life expectancy at birth, total (years)": 61.125, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Nepal", "Life expectancy at birth, total (years)": 68.57860000000001, "Hospital beds (per 1,000 people)": 0.23399999999999999}, {"Country Name": "Netherlands", "Life expectancy at birth, total (years)": 81.75121951219512, "Hospital beds (per 1,000 people)": 3.2619999999999996}, {"Country Name": "New Caledonia", "Life expectancy at birth, total (years)": 77.3776, "Hospital beds (per 1,000 people)": null}, {"Country Name": "New Zealand", "Life expectancy at birth, total (years)": 81.77858536585367, "Hospital beds (per 1,000 people)": 2.678}, {"Country Name": "Nicaragua", "Life expectancy at birth, total (years)": 73.4222, "Hospital beds (per 1,000 people)": 0.9120000000000001}, {"Country Name": "Niger", "Life expectancy at birth, total (years)": 59.479600000000005, "Hospital beds (per 1,000 people)": 0.254}, {"Country Name": "Nigeria", "Life expectancy at birth, total (years)": 52.440599999999996, "Hospital beds (per 1,000 people)": null}, {"Country Name": "North Macedonia", "Life expectancy at birth, total (years)": 76.00146341463417, "Hospital beds (per 1,000 people)": 4.226}, {"Country Name": "Northern Mariana Islands", "Life expectancy at birth, total (years)": 77.51520000000001, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Norway", "Life expectancy at birth, total (years)": 82.6078048780488, "Hospital beds (per 1,000 people)": 3.6079999999999997}, {"Country Name": "Oman", "Life expectancy at birth, total (years)": 79.697, "Hospital beds (per 1,000 people)": 1.126}, {"Country Name": "Pakistan", "Life expectancy at birth, total (years)": 66.2034, "Hospital beds (per 1,000 people)": 0.504}, {"Country Name": "Palau", "Life expectancy at birth, total (years)": 69.0212, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Panama", "Life expectancy at birth, total (years)": 78.0072, "Hospital beds (per 1,000 people)": 2.04}, {"Country Name": "Papua New Guinea", "Life expectancy at birth, total (years)": 64.9082, "Hospital beds (per 1,000 people)": 0.17}, {"Country Name": "Paraguay", "Life expectancy at birth, total (years)": 73.5372, "Hospital beds (per 1,000 people)": 0.884}, {"Country Name": "Peru", "Life expectancy at birth, total (years)": 75.98679999999999, "Hospital beds (per 1,000 people)": 1.598}, {"Country Name": "Philippines", "Life expectancy at birth, total (years)": 69.6694, "Hospital beds (per 1,000 people)": 0.984}, {"Country Name": "Poland", "Life expectancy at birth, total (years)": 77.71268292682927, "Hospital beds (per 1,000 people)": 6.428}, {"Country Name": "Portugal", "Life expectancy at birth, total (years)": 81.3346341463415, "Hospital beds (per 1,000 people)": 3.4200000000000004}, {"Country Name": "Puerto Rico (US)", "Life expectancy at birth, total (years)": 80.5252, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Qatar", "Life expectancy at birth, total (years)": 82.40979999999999, "Hospital beds (per 1,000 people)": 1.024}, {"Country Name": "Romania", "Life expectancy at birth, total (years)": 75.25951219512197, "Hospital beds (per 1,000 people)": 6.867999999999999}, {"Country Name": "Russian Federation", "Life expectancy at birth, total (years)": 72.20643902439024, "Hospital beds (per 1,000 people)": 7.294}, {"Country Name": "Rwanda", "Life expectancy at birth, total (years)": 66.06739999999999, "Hospital beds (per 1,000 people)": 0.726}, {"Country Name": "Samoa", "Life expectancy at birth, total (years)": 70.875, "Hospital beds (per 1,000 people)": null}, {"Country Name": "San Marino", "Life expectancy at birth, total (years)": 84.9312, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Sao Tome and Principe", "Life expectancy at birth, total (years)": 67.061, "Hospital beds (per 1,000 people)": 2.89}, {"Country Name": "Saudi Arabia", "Life expectancy at birth, total (years)": 78.3828, "Hospital beds (per 1,000 people)": 2.134}, {"Country Name": "Senegal", "Life expectancy at birth, total (years)": 67.0562, "Hospital beds (per 1,000 people)": 0.7166666666666667}, {"Country Name": "Serbia", "Life expectancy at birth, total (years)": 75.66829268292683, "Hospital beds (per 1,000 people)": 5.29}, {"Country Name": "Seychelles", "Life expectancy at birth, total (years)": 73.95853658536585, "Hospital beds (per 1,000 people)": 3.1}, {"Country Name": "Sierra Leone", "Life expectancy at birth, total (years)": 57.760799999999996, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Singapore", "Life expectancy at birth, total (years)": 83.11560975609756, "Hospital beds (per 1,000 people)": 2.462}, {"Country Name": "Sint Maarten (Dutch part)", "Life expectancy at birth, total (years)": 75.7358, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Slovak Republic", "Life expectancy at birth, total (years)": 77.16536585365854, "Hospital beds (per 1,000 people)": 5.7620000000000005}, {"Country Name": "Slovenia", "Life expectancy at birth, total (years)": 81.17756097560975, "Hospital beds (per 1,000 people)": 4.4159999999999995}, {"Country Name": "Solomon Islands", "Life expectancy at birth, total (years)": 69.65259999999999, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Somalia", "Life expectancy at birth, total (years)": 54.909000000000006, "Hospital beds (per 1,000 people)": 0.8699999999999999}, {"Country Name": "South Africa", "Life expectancy at birth, total (years)": 65.20419999999999, "Hospital beds (per 1,000 people)": null}, {"Country Name": "South Sudan", "Life expectancy at birth, total (years)": 44.3724, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Spain", "Life expectancy at birth, total (years)": 83.34146341463415, "Hospital beds (per 1,000 people)": 2.968}, {"Country Name": "Sri Lanka", "Life expectancy at birth, total (years)": 76.3096, "Hospital beds (per 1,000 people)": 3.878}, {"Country Name": "St. Kitts and Nevis", "Life expectancy at birth, total (years)": 71.31960000000001, "Hospital beds (per 1,000 people)": 4.864}, {"Country Name": "St. Lucia", "Life expectancy at birth, total (years)": 72.58200000000001, "Hospital beds (per 1,000 people)": 1.365}, {"Country Name": "St. Martin (French part)", "Life expectancy at birth, total (years)": 79.7166, "Hospital beds (per 1,000 people)": null}, {"Country Name": "St. Vincent and the Grenadines", "Life expectancy at birth, total (years)": 70.8374, "Hospital beds (per 1,000 people)": 4.293333333333333}, {"Country Name": "Sudan", "Life expectancy at birth, total (years)": 65.10040000000001, "Hospital beds (per 1,000 people)": 0.68}, {"Country Name": "Suriname", "Life expectancy at birth, total (years)": 71.2068, "Hospital beds (per 1,000 people)": 2.8440000000000003}, {"Country Name": "Sweden", "Life expectancy at birth, total (years)": 82.51804878048782, "Hospital beds (per 1,000 people)": 2.2359999999999998}, {"Country Name": "Switzerland", "Life expectancy at birth, total (years)": 83.54195121951223, "Hospital beds (per 1,000 people)": 4.6579999999999995}, {"Country Name": "Syrian Arab Republic", "Life expectancy at birth, total (years)": 66.4894, "Hospital beds (per 1,000 people)": 1.3699999999999999}, {"Country Name": "Tajikistan", "Life expectancy at birth, total (years)": 70.374, "Hospital beds (per 1,000 people)": 4.482}, {"Country Name": "Tanzania", "Life expectancy at birth, total (years)": 64.958, "Hospital beds (per 1,000 people)": 0.5}, {"Country Name": "Thailand", "Life expectancy at birth, total (years)": 76.94160000000001, "Hospital beds (per 1,000 people)": 2.118}, {"Country Name": "Timor-Leste", "Life expectancy at birth, total (years)": 65.9068, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Togo", "Life expectancy at birth, total (years)": 60.136, "Hospital beds (per 1,000 people)": 0.64}, {"Country Name": "Tonga", "Life expectancy at birth, total (years)": 72.0658, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Trinidad and Tobago", "Life expectancy at birth, total (years)": 72.85900000000001, "Hospital beds (per 1,000 people)": 2.2960000000000003}, {"Country Name": "Tunisia", "Life expectancy at birth, total (years)": 75.2056, "Hospital beds (per 1,000 people)": 1.78}, {"Country Name": "Turkiye", "Life expectancy at birth, total (years)": 77.07239999999999, "Hospital beds (per 1,000 people)": 2.742}, {"Country Name": "Turkmenistan", "Life expectancy at birth, total (years)": 69.214, "Hospital beds (per 1,000 people)": 4.198}, {"Country Name": "Turks and Caicos Islands", "Life expectancy at birth, total (years)": 77.51, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Tuvalu", "Life expectancy at birth, total (years)": 65.7076, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Uganda", "Life expectancy at birth, total (years)": 65.1256, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Ukraine", "Life expectancy at birth, total (years)": 73.51140000000001, "Hospital beds (per 1,000 people)": 6.962000000000001}, {"Country Name": "United Arab Emirates", "Life expectancy at birth, total (years)": 82.3408, "Hospital beds (per 1,000 people)": 1.5539999999999998}, {"Country Name": "United Kingdom", "Life expectancy at birth, total (years)": 81.19870243902439, "Hospital beds (per 1,000 people)": 2.534}, {"Country Name": "United States", "Life expectancy at birth, total (years)": 78.6390243902439, "Hospital beds (per 1,000 people)": 2.77}, {"Country Name": "Uruguay", "Life expectancy at birth, total (years)": 77.4568, "Hospital beds (per 1,000 people)": 2.468}, {"Country Name": "Uzbekistan", "Life expectancy at birth, total (years)": 71.7478, "Hospital beds (per 1,000 people)": 4.404000000000001}, {"Country Name": "Vanuatu", "Life expectancy at birth, total (years)": 70.4938, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Venezuela, RB", "Life expectancy at birth, total (years)": 72.4632, "Hospital beds (per 1,000 people)": 0.9120000000000001}, {"Country Name": "Viet Nam", "Life expectancy at birth, total (years)": 74.05519999999999, "Hospital beds (per 1,000 people)": 2.5233333333333334}, {"Country Name": "Virgin Islands (U.S.)", "Life expectancy at birth, total (years)": 79.34829268292681, "Hospital beds (per 1,000 people)": null}, {"Country Name": "West Bank and Gaza", "Life expectancy at birth, total (years)": 75.1802, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Yemen, Rep.", "Life expectancy at birth, total (years)": 66.6936, "Hospital beds (per 1,000 people)": 0.71}, {"Country Name": "Zambia", "Life expectancy at birth, total (years)": 61.6946, "Hospital beds (per 1,000 people)": null}, {"Country Name": "Zimbabwe", "Life expectancy at birth, total (years)": 60.1956, "Hospital beds (per 1,000 people)": null}]}}, {"mode": "vega-lite"});
+</script>
+</div>
+</div>
+<div id="eda72c30-a71f-4473-9a55-61f79828f7fc" class="cell" data-execution_count="240">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>wbscatter <span class="op">=</span> wbpivot[wbpivot[<span class="st">'Year'</span>] <span class="op">==</span> <span class="st">'2015'</span>]</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>alt.Chart(wbscatter).mark_circle().encode(</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">'Income share held by highest 10%:Q'</span>,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span><span class="st">'GDP per capita (current US$):Q'</span>,</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    tooltip<span class="op">=</span>[<span class="st">'Country Name'</span>,<span class="st">'Year'</span>,<span class="st">'GDP per capita (current US$)'</span>,<span class="st">'Income share held by highest 10%'</span>]</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>).interactive().properties(title<span class="op">=</span><span class="st">'GDP per Capita and Income Share of Top 10</span><span class="sc">% i</span><span class="st">n 2015'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>/opt/anaconda3/lib/python3.10/site-packages/altair/utils/core.py:395: FutureWarning: the convert_dtype parameter is deprecated and will be removed in a future version.  Do ``ser.astype(object).apply()`` instead if you want ``convert_dtype=False``.
+  col = df[col_name].apply(to_list_if_array, convert_dtype=False)
+/opt/anaconda3/lib/python3.10/site-packages/altair/utils/core.py:395: FutureWarning: the convert_dtype parameter is deprecated and will be removed in a future version.  Do ``ser.astype(object).apply()`` instead if you want ``convert_dtype=False``.
+  col = df[col_name].apply(to_list_if_array, convert_dtype=False)
+/opt/anaconda3/lib/python3.10/site-packages/altair/utils/core.py:395: FutureWarning: the convert_dtype parameter is deprecated and will be removed in a future version.  Do ``ser.astype(object).apply()`` instead if you want ``convert_dtype=False``.
+  col = df[col_name].apply(to_list_if_array, convert_dtype=False)
+/opt/anaconda3/lib/python3.10/site-packages/altair/utils/core.py:395: FutureWarning: the convert_dtype parameter is deprecated and will be removed in a future version.  Do ``ser.astype(object).apply()`` instead if you want ``convert_dtype=False``.
+  col = df[col_name].apply(to_list_if_array, convert_dtype=False)
+/opt/anaconda3/lib/python3.10/site-packages/altair/utils/core.py:395: FutureWarning: the convert_dtype parameter is deprecated and will be removed in a future version.  Do ``ser.astype(object).apply()`` instead if you want ``convert_dtype=False``.
+  col = df[col_name].apply(to_list_if_array, convert_dtype=False)
+/opt/anaconda3/lib/python3.10/site-packages/altair/utils/core.py:395: FutureWarning: the convert_dtype parameter is deprecated and will be removed in a future version.  Do ``ser.astype(object).apply()`` instead if you want ``convert_dtype=False``.
+  col = df[col_name].apply(to_list_if_array, convert_dtype=False)
+/opt/anaconda3/lib/python3.10/site-packages/altair/utils/core.py:395: FutureWarning: the convert_dtype parameter is deprecated and will be removed in a future version.  Do ``ser.astype(object).apply()`` instead if you want ``convert_dtype=False``.
+  col = df[col_name].apply(to_list_if_array, convert_dtype=False)
+/opt/anaconda3/lib/python3.10/site-packages/altair/utils/core.py:395: FutureWarning: the convert_dtype parameter is deprecated and will be removed in a future version.  Do ``ser.astype(object).apply()`` instead if you want ``convert_dtype=False``.
+  col = df[col_name].apply(to_list_if_array, convert_dtype=False)</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="240">
+
+<style>
+  #altair-viz-7624b1e519294927b44be03742e7286b.vega-embed {
+    width: 100%;
+    display: flex;
+  }
+
+  #altair-viz-7624b1e519294927b44be03742e7286b.vega-embed details,
+  #altair-viz-7624b1e519294927b44be03742e7286b.vega-embed details summary {
+    position: relative;
+  }
+</style>
+<div id="altair-viz-7624b1e519294927b44be03742e7286b"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-7624b1e519294927b44be03742e7286b") {
+      outputDiv = document.getElementById("altair-viz-7624b1e519294927b44be03742e7286b");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@5.8.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "5.8.0"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-c4671dba39c22d529e3003fae592d37f"}, "mark": {"type": "circle"}, "encoding": {"tooltip": [{"field": "Country Name", "type": "nominal"}, {"field": "Year", "type": "nominal"}, {"field": "GDP per capita (current US$)", "type": "nominal"}, {"field": "Income share held by highest 10%", "type": "nominal"}], "x": {"field": "Income share held by highest 10%", "type": "quantitative"}, "y": {"field": "GDP per capita (current US$)", "type": "quantitative"}}, "params": [{"name": "param_12", "select": {"type": "interval", "encodings": ["x", "y"]}, "bind": "scales"}], "title": "GDP per Capita and Income Share of Top 10% in 2015", "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-c4671dba39c22d529e3003fae592d37f": [{"Country Name": "Afghanistan", "Year": "2015", "GDP per capita (current US$)": "565.569730408751", "Hospital beds (per 1,000 people)": 0.44, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 62.27, "Net migration": "-286314", "Real interest rate (%)": "12.2525481629518", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "2.18729357416894"}, {"Country Name": "Albania", "Year": "2015", "GDP per capita (current US$)": "3981.72662261867", "Hospital beds (per 1,000 people)": 2.85, "Income share held by highest 10%": "24.8", "Life expectancy at birth, total (years)": 78.358, "Net migration": "-20500", "Real interest rate (%)": "7.0515158846934", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "68.3860849244091"}, {"Country Name": "Algeria", "Year": "2015", "GDP per capita (current US$)": "4685.05902729002", "Hospital beds (per 1,000 people)": 1.64, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 75.159, "Net migration": "-27638", "Real interest rate (%)": "13.6683505561602", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "3.79814565033986"}, {"Country Name": "American Samoa", "Year": "2015", "GDP per capita (current US$)": "12727.4102651386", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 72.654, "Net migration": "-1366", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "18.9114565603843"}, {"Country Name": "Andorra", "Year": "2015", "GDP per capita (current US$)": "38654.9347203095", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 84.532, "Net migration": "-1873", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "2189.1539889711"}, {"Country Name": "Angola", "Year": "2015", "GDP per capita (current US$)": "3213.90261080059", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 61.042, "Net migration": "74171", "Real interest rate (%)": "21.1441815303596", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "8.06170993910817"}, {"Country Name": "Antigua and Barbuda", "Year": "2015", "GDP per capita (current US$)": "16077.6340769406", "Hospital beds (per 1,000 people)": 4.01, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 76.892, "Net migration": "44", "Real interest rate (%)": "6.84159391335869", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "726.996163697167"}, {"Country Name": "Argentina", "Year": "2015", "GDP per capita (current US$)": "13679.6264980954", "Hospital beds (per 1,000 people)": 4.97, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 76.6, "Net migration": "5464", "Real interest rate (%)": "-1.31470878459509", "Researchers in R&D (per million people)": "1225.50988769531", "Secure Internet servers (per 1 million people)": "122.294512787585"}, {"Country Name": "Armenia", "Year": "2015", "GDP per capita (current US$)": "3512.39350276709", "Hospital beds (per 1,000 people)": 4.35, "Income share held by highest 10%": "26.7", "Life expectancy at birth, total (years)": 74.8707317073171, "Net migration": "-15225", "Real interest rate (%)": "16.1800096730379", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "74.5523530586434"}, {"Country Name": "Aruba", "Year": "2015", "GDP per capita (current US$)": "27458.2253310273", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 75.405, "Net migration": "373", "Real interest rate (%)": "0.15792476968271", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "732.118695901989"}, {"Country Name": "Australia", "Year": "2015", "GDP per capita (current US$)": "56739.0265346593", "Hospital beds (per 1,000 people)": 3.82, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 82.4, "Net migration": "212350", "Real interest rate (%)": "6.23777334791279", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "4574.11080242501"}, {"Country Name": "Austria", "Year": "2015", "GDP per capita (current US$)": "43915.228020857", "Hospital beds (per 1,000 people)": 7.54, "Income share held by highest 10%": "23.8", "Life expectancy at birth, total (years)": 81.190243902439, "Net migration": "115175", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "5073.4287109375", "Secure Internet servers (per 1 million people)": "3081.90763093797"}, {"Country Name": "Azerbaijan", "Year": "2015", "GDP per capita (current US$)": "5500.50364628486", "Hospital beds (per 1,000 people)": 4.08, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 72.349, "Net migration": "1073", "Real interest rate (%)": "28.8887719302899", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "33.2665204805178"}, {"Country Name": "Bahamas, The", "Year": "2015", "GDP per capita (current US$)": "30719.405417469", "Hospital beds (per 1,000 people)": 2.79, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 73.805, "Net migration": "1002", "Real interest rate (%)": "-0.448486327806091", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "973.151401597525"}, {"Country Name": "Bahrain", "Year": "2015", "GDP per capita (current US$)": "23734.0551143019", "Hospital beds (per 1,000 people)": 1.9, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 80.338, "Net migration": "36809", "Real interest rate (%)": "15.2531776895774", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "328.389969656767"}, {"Country Name": "Bangladesh", "Year": "2015", "GDP per capita (current US$)": "1224.38647668165", "Hospital beds (per 1,000 people)": 0.77, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 70.543, "Net migration": "-909223", "Real interest rate (%)": "5.51264431590569", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "1.97009497470244"}, {"Country Name": "Barbados", "Year": "2015", "GDP per capita (current US$)": "18954.2913724506", "Hospital beds (per 1,000 people)": 6.03, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 76.055, "Net migration": "-65", "Real interest rate (%)": "8.72280922839561", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "587.834689415391"}, {"Country Name": "Belarus", "Year": "2015", "GDP per capita (current US$)": "5967.05595058777", "Hospital beds (per 1,000 people)": 10.02, "Income share held by highest 10%": "21.2", "Life expectancy at birth, total (years)": 73.6243902439025, "Net migration": "18088", "Real interest rate (%)": "1.77624138938061", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "107.91584382157"}, {"Country Name": "Belgium", "Year": "2015", "GDP per capita (current US$)": "40893.804537772", "Hospital beds (per 1,000 people)": 5.85, "Income share held by highest 10%": "22.2", "Life expectancy at birth, total (years)": 80.9926829268293, "Net migration": "63536", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "4731.81591796875", "Secure Internet servers (per 1 million people)": "2038.46021481266"}, {"Country Name": "Belize", "Year": "2015", "GDP per capita (current US$)": "6154.49593498217", "Hospital beds (per 1,000 people)": 0.96, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 71.647, "Net migration": "1596", "Real interest rate (%)": "10.6573200651991", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "1156.22184866403"}, {"Country Name": "Benin", "Year": "2015", "GDP per capita (current US$)": "1002.41886879614", "Hospital beds (per 1,000 people)": 0.44, "Income share held by highest 10%": "37.6", "Life expectancy at birth, total (years)": 59.123, "Net migration": "3369", "Real interest rate (%)": "4.26633438639015", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "2.11254941495145"}, {"Country Name": "Bermuda", "Year": "2015", "GDP per capita (current US$)": "104855.366822135", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 80.338, "Net migration": "-117", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "8319.67729736544"}, {"Country Name": "Bhutan", "Year": "2015", "GDP per capita (current US$)": "2954.04081911097", "Hospital beds (per 1,000 people)": 1.72, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 70.797, "Net migration": "450", "Real interest rate (%)": "11.3226250142996", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "18.9031322490137"}, {"Country Name": "Bolivia", "Year": "2015", "GDP per capita (current US$)": "2996.01289811344", "Hospital beds (per 1,000 people)": 1.18, "Income share held by highest 10%": "34.8", "Life expectancy at birth, total (years)": 67.205, "Net migration": "-10525", "Real interest rate (%)": "13.3088029026578", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "26.3284400263103"}, {"Country Name": "Bosnia and Herzegovina", "Year": "2015", "GDP per capita (current US$)": "4662.25883724069", "Hospital beds (per 1,000 people)": 2.36, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 77.073, "Net migration": "-33948", "Real interest rate (%)": "4.36356276459313", "Researchers in R&D (per million people)": "353.665313720703", "Secure Internet servers (per 1 million people)": "80.1468563248233"}, {"Country Name": "Botswana", "Year": "2015", "GDP per capita (current US$)": "6141.20394726616", "Hospital beds (per 1,000 people)": 2.49, "Income share held by highest 10%": "42.9", "Life expectancy at birth, total (years)": 63.215, "Net migration": "-9599", "Real interest rate (%)": "4.06794729905494", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "34.0402664581284"}, {"Country Name": "Brazil", "Year": "2015", "GDP per capita (current US$)": "8936.19661712113", "Hospital beds (per 1,000 people)": 2.35, "Income share held by highest 10%": "40.9", "Life expectancy at birth, total (years)": 75.106, "Net migration": "-173611", "Real interest rate (%)": "33.8323439727973", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "161.164815967859"}, {"Country Name": "British Virgin Islands", "Year": "2015", "GDP per capita (current US$)": "..", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 76.558, "Net migration": "1904", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "32204.7654936518"}, {"Country Name": "Brunei Darussalam", "Year": "2015", "GDP per capita (current US$)": "30625.128732694", "Hospital beds (per 1,000 people)": 3.07, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 74.88, "Net migration": "356", "Real interest rate (%)": "28.0537842265424", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "563.69785794814"}, {"Country Name": "Bulgaria", "Year": "2015", "GDP per capita (current US$)": "7268.65445473873", "Hospital beds (per 1,000 people)": 7.11, "Income share held by highest 10%": "28.7", "Life expectancy at birth, total (years)": 74.6146341463415, "Net migration": "-4227", "Real interest rate (%)": "4.37223769632351", "Researchers in R&D (per million people)": "1976.75903320312", "Secure Internet servers (per 1 million people)": "698.717466862823"}, {"Country Name": "Burkina Faso", "Year": "2015", "GDP per capita (current US$)": "630.124750752312", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 58.778, "Net migration": "-19726", "Real interest rate (%)": "7.54593907323847", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "1.43789208854199"}, {"Country Name": "Burundi", "Year": "2015", "GDP per capita (current US$)": "280.966831311923", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 60.107, "Net migration": "-236207", "Real interest rate (%)": "-4.93706084453044", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "0.724140490496561"}, {"Country Name": "Cabo Verde", "Year": "2015", "GDP per capita (current US$)": "3415.06266730931", "Hospital beds (per 1,000 people)": 1.93, "Income share held by highest 10%": "32.3", "Life expectancy at birth, total (years)": 74.096, "Net migration": "-6226", "Real interest rate (%)": "8.64532549783124", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "76.1133034344664"}, {"Country Name": "Cambodia", "Year": "2015", "GDP per capita (current US$)": "1547.32010444393", "Hospital beds (per 1,000 people)": 0.85, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 69.398, "Net migration": "-58101", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "30.3892307281494", "Secure Internet servers (per 1 million people)": "10.1131320235462"}, {"Country Name": "Cameroon", "Year": "2015", "GDP per capita (current US$)": "1415.00009710569", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 59.687, "Net migration": "42008", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "2.28436736247032"}, {"Country Name": "Canada", "Year": "2015", "GDP per capita (current US$)": "43594.1941045394", "Hospital beds (per 1,000 people)": 2.62, "Income share held by highest 10%": "25.1", "Life expectancy at birth, total (years)": 81.8258536585366, "Net migration": "224332", "Real interest rate (%)": "3.6745334582912", "Researchers in R&D (per million people)": "4545.96875", "Secure Internet servers (per 1 million people)": "3386.74415755684"}, {"Country Name": "Cayman Islands", "Year": "2015", "GDP per capita (current US$)": "76379.2095108681", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 78.119, "Net migration": "1107", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "4980.37052658901"}, {"Country Name": "Central African Republic", "Year": "2015", "GDP per capita (current US$)": "366.322853938121", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 51.934, "Net migration": "-63045", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "0.216014447046218"}, {"Country Name": "Chad", "Year": "2015", "GDP per capita (current US$)": "993.990730610869", "Hospital beds (per 1,000 people)": 0.49, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 51.32, "Net migration": "-48918", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "0.341352360222865"}, {"Country Name": "Channel Islands", "Year": "2015", "GDP per capita (current US$)": "61852.0735568957", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 81.4, "Net migration": "432", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": ".."}, {"Country Name": "Chile", "Year": "2015", "GDP per capita (current US$)": "13433.9202987032", "Hospital beds (per 1,000 people)": 2.15, "Income share held by highest 10%": "36.8", "Life expectancy at birth, total (years)": 80.008, "Net migration": "55689", "Real interest rate (%)": "0.534100501734634", "Researchers in R&D (per million people)": "455.291839599609", "Secure Internet servers (per 1 million people)": "223.021034623669"}, {"Country Name": "China", "Year": "2015", "GDP per capita (current US$)": "8175.33285077393", "Hospital beds (per 1,000 people)": 3.82, "Income share held by highest 10%": "29.4", "Life expectancy at birth, total (years)": 76.975, "Net migration": "-646941", "Real interest rate (%)": "4.20696426973205", "Researchers in R&D (per million people)": "1162.71081542969", "Secure Internet servers (per 1 million people)": "19.5592306465873"}, {"Country Name": "Colombia", "Year": "2015", "GDP per capita (current US$)": "6248.51490534512", "Hospital beds (per 1,000 people)": 1.65, "Income share held by highest 10%": "39.9", "Life expectancy at birth, total (years)": 76.067, "Net migration": "-41123", "Real interest rate (%)": "8.78547373201402", "Researchers in R&D (per million people)": "70.6693115234375", "Secure Internet servers (per 1 million people)": "72.1525298946518"}, {"Country Name": "Comoros", "Year": "2015", "GDP per capita (current US$)": "1329.3704808998", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 64.473, "Net migration": "-2815", "Real interest rate (%)": "12.0084648039193", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "1.37611775164377"}, {"Country Name": "Congo, Dem. Rep.", "Year": "2015", "GDP per capita (current US$)": "467.9145805459", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 58.658, "Net migration": "-17711", "Real interest rate (%)": "20.7667503479097", "Researchers in R&D (per million people)": "10.1051502227783", "Secure Internet servers (per 1 million people)": "0.48127037015405"}, {"Country Name": "Congo, Rep.", "Year": "2015", "GDP per capita (current US$)": "2439.35189403696", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 63.662, "Net migration": "-18207", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "3.53108660754974"}, {"Country Name": "Costa Rica", "Year": "2015", "GDP per capita (current US$)": "11714.7105980803", "Hospital beds (per 1,000 people)": 1.15, "Income share held by highest 10%": "36.8", "Life expectancy at birth, total (years)": 80.407, "Net migration": "1617", "Real interest rate (%)": "9.88706328673012", "Researchers in R&D (per million people)": "500.971374511719", "Secure Internet servers (per 1 million people)": "314.858454831614"}, {"Country Name": "Cote d'Ivoire", "Year": "2015", "GDP per capita (current US$)": "1814.71855088017", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "31.9", "Life expectancy at birth, total (years)": 58.281, "Net migration": "522", "Real interest rate (%)": "0.361232955383729", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "4.63433474837662"}, {"Country Name": "Croatia", "Year": "2015", "GDP per capita (current US$)": "12285.3032582105", "Hospital beds (per 1,000 people)": 5.5, "Income share held by highest 10%": "23.2", "Life expectancy at birth, total (years)": 77.2756097560976, "Net migration": "-27501", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "1513.83837890625", "Secure Internet servers (per 1 million people)": "643.587906231747"}, {"Country Name": "Cuba", "Year": "2015", "GDP per capita (current US$)": "7727.91997207998", "Hospital beds (per 1,000 people)": 4.05, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 77.745, "Net migration": "-24910", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "0.0886912847065627"}, {"Country Name": "Curacao", "Year": "2015", "GDP per capita (current US$)": "19361.8130008678", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 76.482, "Net migration": "842", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "2525.6361564755"}, {"Country Name": "Cyprus", "Year": "2015", "GDP per capita (current US$)": "23487.228515625", "Hospital beds (per 1,000 people)": 2.44, "Income share held by highest 10%": "27.5", "Life expectancy at birth, total (years)": 81.464, "Net migration": "11277", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "1010.6162109375", "Secure Internet servers (per 1 million people)": "2263.21892051018"}, {"Country Name": "Czechia", "Year": "2015", "GDP per capita (current US$)": "17931.5987670768", "Hospital beds (per 1,000 people)": 6.68, "Income share held by highest 10%": "22.1", "Life expectancy at birth, total (years)": 78.5780487804878, "Net migration": "5037", "Real interest rate (%)": "3.01082711223738", "Researchers in R&D (per million people)": "3619.16015625", "Secure Internet servers (per 1 million people)": "2048.8222188023"}, {"Country Name": "Denmark", "Year": "2015", "GDP per capita (current US$)": "53094.0133607574", "Hospital beds (per 1,000 people)": 2.53, "Income share held by highest 10%": "23.8", "Life expectancy at birth, total (years)": 80.7024390243902, "Net migration": "42284", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "7566.4580078125", "Secure Internet servers (per 1 million people)": "6004.944503221"}, {"Country Name": "Djibouti", "Year": "2015", "GDP per capita (current US$)": "2376.12554719873", "Hospital beds (per 1,000 people)": 1.28, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 62.833, "Net migration": "1723", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "9.80091403324274"}, {"Country Name": "Dominica", "Year": "2015", "GDP per capita (current US$)": "8282.59874702141", "Hospital beds (per 1,000 people)": 3.7, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 69.968, "Net migration": "92", "Real interest rate (%)": "3.03627883680696", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "269.848032949865"}, {"Country Name": "Dominican Republic", "Year": "2015", "GDP per capita (current US$)": "6800.95309395474", "Hospital beds (per 1,000 people)": 1.52, "Income share held by highest 10%": "34.8", "Life expectancy at birth, total (years)": 72.982, "Net migration": "-36375", "Real interest rate (%)": "12.2048880267937", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "45.7122967707473"}, {"Country Name": "Ecuador", "Year": "2015", "GDP per capita (current US$)": "5976.1596805651", "Hospital beds (per 1,000 people)": 1.53, "Income share held by highest 10%": "34.9", "Life expectancy at birth, total (years)": 76.222, "Net migration": "14724", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "81.088267253158"}, {"Country Name": "Egypt, Arab Rep.", "Year": "2015", "GDP per capita (current US$)": "3306.98159414141", "Hospital beds (per 1,000 people)": 1.27, "Income share held by highest 10%": "27.8", "Life expectancy at birth, total (years)": 70.135, "Net migration": "-193298", "Real interest rate (%)": "1.54106846018941", "Researchers in R&D (per million people)": "631.043334960938", "Secure Internet servers (per 1 million people)": "9.78941787422399"}, {"Country Name": "El Salvador", "Year": "2015", "GDP per capita (current US$)": "3790.34089108162", "Hospital beds (per 1,000 people)": 1.03, "Income share held by highest 10%": "31.8", "Life expectancy at birth, total (years)": 70.952, "Net migration": "-51278", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "64.7806625366211", "Secure Internet servers (per 1 million people)": "46.2508061547856"}, {"Country Name": "Equatorial Guinea", "Year": "2015", "GDP per capita (current US$)": "9068.91003238645", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 60.635, "Net migration": "17697", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "2.75117733194949"}, {"Country Name": "Eritrea", "Year": "2015", "GDP per capita (current US$)": "..", "Hospital beds (per 1,000 people)": 1.15, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 65.909, "Net migration": "-52965", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "0"}, {"Country Name": "Estonia", "Year": "2015", "GDP per capita (current US$)": "17722.1557669523", "Hospital beds (per 1,000 people)": 4.82, "Income share held by highest 10%": "24.4", "Life expectancy at birth, total (years)": 77.590243902439, "Net migration": "4261", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "3188.49194335938", "Secure Internet servers (per 1 million people)": "3120.70712714772"}, {"Country Name": "Eswatini", "Year": "2015", "GDP per capita (current US$)": "3420.75357067279", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 54.941, "Net migration": "-12582", "Real interest rate (%)": "3.8726179662017", "Researchers in R&D (per million people)": "137.915771484375", "Secure Internet servers (per 1 million people)": "25.3759801472332"}, {"Country Name": "Ethiopia", "Year": "2015", "GDP per capita (current US$)": "621.845673808133", "Hospital beds (per 1,000 people)": 0.3, "Income share held by highest 10%": "28.5", "Life expectancy at birth, total (years)": 63.592, "Net migration": "62785", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "0.31771358668938"}, {"Country Name": "Faroe Islands", "Year": "2015", "GDP per capita (current US$)": "52635.0375463609", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 81.7926829268293, "Net migration": "499", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "3619.5578822519"}, {"Country Name": "Fiji", "Year": "2015", "GDP per capita (current US$)": "5097.53106864695", "Hospital beds (per 1,000 people)": 1.88, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 66.48, "Net migration": "-10401", "Real interest rate (%)": "3.17797124974835", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "86.0024951609988"}, {"Country Name": "Finland", "Year": "2015", "GDP per capita (current US$)": "42560.3456767103", "Hospital beds (per 1,000 people)": 4.28, "Income share held by highest 10%": "22.4", "Life expectancy at birth, total (years)": 81.4804878048781, "Net migration": "12655", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "6855.97119140625", "Secure Internet servers (per 1 million people)": "3395.18108392853"}, {"Country Name": "France", "Year": "2015", "GDP per capita (current US$)": "36702.4323733379", "Hospital beds (per 1,000 people)": 6.4, "Income share held by highest 10%": "26.6", "Life expectancy at birth, total (years)": 82.3219512195122, "Net migration": "-345", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "4310.70947265625", "Secure Internet servers (per 1 million people)": "1898.47153356589"}, {"Country Name": "French Polynesia", "Year": "2015", "GDP per capita (current US$)": "19166.9594761931", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 82.339, "Net migration": "-1899", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "208.733706174919"}, {"Country Name": "Gabon", "Year": "2015", "GDP per capita (current US$)": "7047.12654634355", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 66.336, "Net migration": "12041", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "15.6786734274413"}, {"Country Name": "Gambia, The", "Year": "2015", "GDP per capita (current US$)": "619.536364296461", "Hospital beds (per 1,000 people)": 1.01, "Income share held by highest 10%": "28.7", "Life expectancy at birth, total (years)": 62.971, "Net migration": "-3224", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "7.64206715219267"}, {"Country Name": "Georgia", "Year": "2015", "GDP per capita (current US$)": "4086.6223465965", "Hospital beds (per 1,000 people)": 3.39, "Income share held by highest 10%": "27.8", "Life expectancy at birth, total (years)": 73.241, "Net migration": "-13321", "Real interest rate (%)": "6.7481759122845", "Researchers in R&D (per million people)": "1359.02233886719", "Secure Internet servers (per 1 million people)": "118.64892695199"}, {"Country Name": "Germany", "Year": "2015", "GDP per capita (current US$)": "41911.0109851054", "Hospital beds (per 1,000 people)": 8.09, "Income share held by highest 10%": "24.6", "Life expectancy at birth, total (years)": 80.6414634146341, "Net migration": "1175283", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "4755.29541015625", "Secure Internet servers (per 1 million people)": "4297.92588653237"}, {"Country Name": "Ghana", "Year": "2015", "GDP per capita (current US$)": "1722.77282833606", "Hospital beds (per 1,000 people)": 0.69, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 63.175, "Net migration": "-13306", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "87.4797210693359", "Secure Internet servers (per 1 million people)": "6.96959597391531"}, {"Country Name": "Gibraltar", "Year": "2015", "GDP per capita (current US$)": "..", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 82.668, "Net migration": "171", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "11659.084746784"}, {"Country Name": "Greece", "Year": "2015", "GDP per capita (current US$)": "17980.7298238137", "Hospital beds (per 1,000 people)": 4.25, "Income share held by highest 10%": "26.2", "Life expectancy at birth, total (years)": 81.0365853658537, "Net migration": "-43462", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "3196.52294921875", "Secure Internet servers (per 1 million people)": "409.948060615756"}, {"Country Name": "Greenland", "Year": "2015", "GDP per capita (current US$)": "44536.3549705377", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 71.4790243902439, "Net migration": "-315", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "2797.87575293153"}, {"Country Name": "Grenada", "Year": "2015", "GDP per capita (current US$)": "8694.12438005692", "Hospital beds (per 1,000 people)": 3.4, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 75.037, "Net migration": "-181", "Real interest rate (%)": "6.03764923330236", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "209.28529073215"}, {"Country Name": "Guam", "Year": "2015", "GDP per capita (current US$)": "35165.7014644795", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 76.444, "Net migration": "-2937", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "697.371213729117"}, {"Country Name": "Guatemala", "Year": "2015", "GDP per capita (current US$)": "3893.50522093509", "Hospital beds (per 1,000 people)": 0.59, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 70.915, "Net migration": "-48179", "Real interest rate (%)": "10.7558483433111", "Researchers in R&D (per million people)": "22.7440795898438", "Secure Internet servers (per 1 million people)": "28.9886958486622"}, {"Country Name": "Guinea", "Year": "2015", "GDP per capita (current US$)": "747.356966759448", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 57.899, "Net migration": "-15117", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "0.764846304135184"}, {"Country Name": "Guinea-Bissau", "Year": "2015", "GDP per capita (current US$)": "645.066837207039", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 60.071, "Net migration": "-1393", "Real interest rate (%)": "-8.1780682851766", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "1.67930154490144"}, {"Country Name": "Guyana", "Year": "2015", "GDP per capita (current US$)": "5640.41560569466", "Hospital beds (per 1,000 people)": 1.76, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 67.719, "Net migration": "-6527", "Real interest rate (%)": "9.54233962133676", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "27.6759697462114"}, {"Country Name": "Haiti", "Year": "2015", "GDP per capita (current US$)": "1411.12684746796", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 63.224, "Net migration": "-32669", "Real interest rate (%)": "7.33548726057978", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "3.89613771117304"}, {"Country Name": "Honduras", "Year": "2015", "GDP per capita (current US$)": "2271.20265980349", "Hospital beds (per 1,000 people)": 0.6, "Income share held by highest 10%": "36.6", "Life expectancy at birth, total (years)": 71.323, "Net migration": "-6509", "Real interest rate (%)": "12.8349768268253", "Researchers in R&D (per million people)": "22.2950592041016", "Secure Internet servers (per 1 million people)": "20.0274863718368"}, {"Country Name": "Hong Kong SAR, China", "Year": "2015", "GDP per capita (current US$)": "42432.1619740441", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 84.2526829268293, "Net migration": "10547", "Real interest rate (%)": "1.30874940928055", "Researchers in R&D (per million people)": "3487.896484375", "Secure Internet servers (per 1 million people)": "2331.82011438289"}, {"Country Name": "Hungary", "Year": "2015", "GDP per capita (current US$)": "12782.9412577973", "Hospital beds (per 1,000 people)": 6.99, "Income share held by highest 10%": "23.8", "Life expectancy at birth, total (years)": 75.5682926829269, "Net migration": "13856", "Real interest rate (%)": "0.088835497631812", "Researchers in R&D (per million people)": "2569.6689453125", "Secure Internet servers (per 1 million people)": "930.825479918614"}, {"Country Name": "Iceland", "Year": "2015", "GDP per capita (current US$)": "52951.6815110898", "Hospital beds (per 1,000 people)": 3.12, "Income share held by highest 10%": "22.5", "Life expectancy at birth, total (years)": 82.4682926829268, "Net migration": "1499", "Real interest rate (%)": "1.46667927688818", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "7611.50491966809"}, {"Country Name": "India", "Year": "2015", "GDP per capita (current US$)": "1583.99815907985", "Hospital beds (per 1,000 people)": 1.7, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 69.326, "Net migration": "-655085", "Real interest rate (%)": "7.55648841353986", "Researchers in R&D (per million people)": "214.349349975586", "Secure Internet servers (per 1 million people)": "11.5306607845422"}, {"Country Name": "Indonesia", "Year": "2015", "GDP per capita (current US$)": "3288.22269725538", "Hospital beds (per 1,000 people)": 1.09, "Income share held by highest 10%": "31.5", "Life expectancy at birth, total (years)": 69.52, "Net migration": "-28487", "Real interest rate (%)": "8.34991063469474", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "17.4523036924373"}, {"Country Name": "Iran, Islamic Rep.", "Year": "2015", "GDP per capita (current US$)": "4952.73355532178", "Hospital beds (per 1,000 people)": 1.81, "Income share held by highest 10%": "27.6", "Life expectancy at birth, total (years)": 75.907, "Net migration": "-46239", "Real interest rate (%)": "13.9854467563743", "Researchers in R&D (per million people)": "789.46240234375", "Secure Internet servers (per 1 million people)": "11.6558634282361"}, {"Country Name": "Iraq", "Year": "2015", "GDP per capita (current US$)": "4440.14189252367", "Hospital beds (per 1,000 people)": 1.38, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 69.977, "Net migration": "-22338", "Real interest rate (%)": "57.625931221869", "Researchers in R&D (per million people)": "63.1546592712402", "Secure Internet servers (per 1 million people)": "2.31626093717781"}, {"Country Name": "Ireland", "Year": "2015", "GDP per capita (current US$)": "64311.8234684057", "Hospital beds (per 1,000 people)": 2.94, "Income share held by highest 10%": "25.4", "Life expectancy at birth, total (years)": 81.4536585365854, "Net migration": "13376", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "5242.06640625", "Secure Internet servers (per 1 million people)": "3194.41458099255"}, {"Country Name": "Isle of Man", "Year": "2015", "GDP per capita (current US$)": "84753.5187422732", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 80.267, "Net migration": "-315", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "1579.07958800378"}, {"Country Name": "Israel", "Year": "2015", "GDP per capita (current US$)": "36213.1041481958", "Hospital beds (per 1,000 people)": 3.17, "Income share held by highest 10%": "28.1", "Life expectancy at birth, total (years)": 82.0512195121951, "Net migration": "29735", "Real interest rate (%)": "1.07298951861706", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "1304.99636042529"}, {"Country Name": "Italy", "Year": "2015", "GDP per capita (current US$)": "30639.8829751432", "Hospital beds (per 1,000 people)": 3.22, "Income share held by highest 10%": "25.8", "Life expectancy at birth, total (years)": 82.5439024390244, "Net migration": "39389", "Real interest rate (%)": "3.3204815735536", "Researchers in R&D (per million people)": "2075.80834960938", "Secure Internet servers (per 1 million people)": "633.243402476241"}, {"Country Name": "Jamaica", "Year": "2015", "GDP per capita (current US$)": "5062.8955502426", "Hospital beds (per 1,000 people)": 1.71, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 72.214, "Net migration": "-10335", "Real interest rate (%)": "9.67705080227993", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "125.243797220658"}, {"Country Name": "Japan", "Year": "2015", "GDP per capita (current US$)": "34960.6393843385", "Hospital beds (per 1,000 people)": 13.15, "Income share held by highest 10%": "23.5", "Life expectancy at birth, total (years)": 83.7939024390244, "Net migration": "168896", "Real interest rate (%)": "-0.9484412297477", "Researchers in R&D (per million people)": "5198.4892578125", "Secure Internet servers (per 1 million people)": "1504.27478154175"}, {"Country Name": "Jordan", "Year": "2015", "GDP per capita (current US$)": "4042.75678097555", "Hospital beds (per 1,000 people)": 1.38, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 75.06, "Net migration": "490844", "Real interest rate (%)": "6.17297626649221", "Researchers in R&D (per million people)": "254.19596862793", "Secure Internet servers (per 1 million people)": "44.6319638828929"}, {"Country Name": "Kazakhstan", "Year": "2015", "GDP per capita (current US$)": "10196.1226255982", "Hospital beds (per 1,000 people)": 5.75, "Income share held by highest 10%": "22.6", "Life expectancy at birth, total (years)": 72.024, "Net migration": "-2011", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "760.847229003906", "Secure Internet servers (per 1 million people)": "46.7259513002782"}, {"Country Name": "Kenya", "Year": "2015", "GDP per capita (current US$)": "1489.11959777284", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "31.6", "Life expectancy at birth, total (years)": 62.279, "Net migration": "-95977", "Real interest rate (%)": "6.26880578270384", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "13.1454528859111"}, {"Country Name": "Kiribati", "Year": "2015", "GDP per capita (current US$)": "1639.85274740652", "Hospital beds (per 1,000 people)": 1.9, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 65.831, "Net migration": "-1022", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "8.56054445062706"}, {"Country Name": "Korea, Dem. People's Rep.", "Year": "2015", "GDP per capita (current US$)": "..", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 72.825, "Net migration": "-3208", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": ".."}, {"Country Name": "Korea, Rep.", "Year": "2015", "GDP per capita (current US$)": "28737.4391706499", "Hospital beds (per 1,000 people)": 11.61, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 82.0243902439024, "Net migration": "276427", "Real interest rate (%)": "0.337001849362955", "Researchers in R&D (per million people)": "7020.43896484375", "Secure Internet servers (per 1 million people)": "557.718897561532"}, {"Country Name": "Kosovo", "Year": "2015", "GDP per capita (current US$)": "3520.62850699375", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "21.5", "Life expectancy at birth, total (years)": 76.024, "Net migration": "-55524", "Real interest rate (%)": "7.66556492106195", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": ".."}, {"Country Name": "Kuwait", "Year": "2015", "GDP per capita (current US$)": "29882.2126867068", "Hospital beds (per 1,000 people)": 2.13, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 79.3765609756098, "Net migration": "129695", "Real interest rate (%)": "40.8597361516985", "Researchers in R&D (per million people)": "405.498443603516", "Secure Internet servers (per 1 million people)": "332.761866116027"}, {"Country Name": "Kyrgyz Republic", "Year": "2015", "GDP per capita (current US$)": "1105.65193844261", "Hospital beds (per 1,000 people)": 4.55, "Income share held by highest 10%": "24.8", "Life expectancy at birth, total (years)": 70.6512195121951, "Net migration": "-5071", "Real interest rate (%)": "19.5333606473613", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "22.5164220875505"}, {"Country Name": "Lao PDR", "Year": "2015", "GDP per capita (current US$)": "2121.01339097363", "Hospital beds (per 1,000 people)": 1.16, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 66.688, "Net migration": "-12991", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "4.11665119246888"}, {"Country Name": "Latvia", "Year": "2015", "GDP per capita (current US$)": "13321.9753140616", "Hospital beds (per 1,000 people)": 5.65, "Income share held by highest 10%": "26.2", "Life expectancy at birth, total (years)": 74.4804878048781, "Net migration": "-10826", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "1818.826171875", "Secure Internet servers (per 1 million people)": "1312.75072350466"}, {"Country Name": "Lebanon", "Year": "2015", "GDP per capita (current US$)": "7714.1099998804", "Hospital beds (per 1,000 people)": 3.37, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 78.275, "Net migration": "-239829", "Real interest rate (%)": "3.63383207891925", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "84.511799129513"}, {"Country Name": "Lesotho", "Year": "2015", "GDP per capita (current US$)": "1121.19851342518", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 51.83, "Net migration": "-7087", "Real interest rate (%)": "0.332986111110699", "Researchers in R&D (per million people)": "23.7320098876953", "Secure Internet servers (per 1 million people)": "6.6520606420854"}, {"Country Name": "Liberia", "Year": "2015", "GDP per capita (current US$)": "692.590082351257", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 59.248, "Net migration": "-15182", "Real interest rate (%)": "13.5354646875379", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "0.858473920957301"}, {"Country Name": "Libya", "Year": "2015", "GDP per capita (current US$)": "7458.48917756374", "Hospital beds (per 1,000 people)": 3.7, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 71.644, "Net migration": "-7660", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "6.12386840480424"}, {"Country Name": "Liechtenstein", "Year": "2015", "GDP per capita (current US$)": "167187.15730982", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 82.6560975609756, "Net migration": "163", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "15442.4707953273"}, {"Country Name": "Lithuania", "Year": "2015", "GDP per capita (current US$)": "14269.8039878287", "Hospital beds (per 1,000 people)": 6.83, "Income share held by highest 10%": "28.6", "Life expectancy at birth, total (years)": 74.3219512195122, "Net migration": "-22560", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "2794.92114257812", "Secure Internet servers (per 1 million people)": "1182.71078135515"}, {"Country Name": "Luxembourg", "Year": "2015", "GDP per capita (current US$)": "105462.012584423", "Hospital beds (per 1,000 people)": 4.96, "Income share held by highest 10%": "25.1", "Life expectancy at birth, total (years)": 82.2926829268293, "Net migration": "11377", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "4636.38037109375", "Secure Internet servers (per 1 million people)": "5500.31249780549"}, {"Country Name": "Macao SAR, China", "Year": "2015", "GDP per capita (current US$)": "70070.2918001631", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 83.2243902439024, "Net migration": "7533", "Real interest rate (%)": "0.704302352322355", "Researchers in R&D (per million people)": "1247.71838378906", "Secure Internet servers (per 1 million people)": "704.619692020532"}, {"Country Name": "Madagascar", "Year": "2015", "GDP per capita (current US$)": "445.320069480568", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 63.362, "Net migration": "-2594", "Real interest rate (%)": "47.146664487391", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "1.53382062683552"}, {"Country Name": "Malawi", "Year": "2015", "GDP per capita (current US$)": "539.605363240686", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 62.324, "Net migration": "-6471", "Real interest rate (%)": "20.5087964592773", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "2.22409683670804"}, {"Country Name": "Malaysia", "Year": "2015", "GDP per capita (current US$)": "9648.6797937523", "Hospital beds (per 1,000 people)": 1.87, "Income share held by highest 10%": "31.3", "Life expectancy at birth, total (years)": 75.288, "Net migration": "187663", "Real interest rate (%)": "3.30703770408129", "Researchers in R&D (per million people)": "2256.60229492188", "Secure Internet servers (per 1 million people)": "226.652764187186"}, {"Country Name": "Maldives", "Year": "2015", "GDP per capita (current US$)": "9644.90655028145", "Hospital beds (per 1,000 people)": 4.95, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 78.607, "Net migration": "9324", "Real interest rate (%)": "3.41688064957206", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "123.787235433979"}, {"Country Name": "Mali", "Year": "2015", "GDP per capita (current US$)": "838.11986940103", "Hospital beds (per 1,000 people)": 0.26, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 57.852, "Net migration": "-48872", "Real interest rate (%)": "1.19163561845071", "Researchers in R&D (per million people)": "29.3867702484131", "Secure Internet servers (per 1 million people)": "2.09756111728368"}, {"Country Name": "Malta", "Year": "2015", "GDP per capita (current US$)": "25529.6813131565", "Hospital beds (per 1,000 people)": 4.47, "Income share held by highest 10%": "23.6", "Life expectancy at birth, total (years)": 81.8975609756097, "Net migration": "9588", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "1865.25573730469", "Secure Internet servers (per 1 million people)": "3534.28481383098"}, {"Country Name": "Marshall Islands", "Year": "2015", "GDP per capita (current US$)": "3764.34426229508", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 65.292, "Net migration": "-1964", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "20.4918032786885"}, {"Country Name": "Mauritania", "Year": "2015", "GDP per capita (current US$)": "1554.94897871782", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 66.498, "Net migration": "-3019", "Real interest rate (%)": "22.8912964047859", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "3.53004153598159"}, {"Country Name": "Mauritius", "Year": "2015", "GDP per capita (current US$)": "9507.87133656424", "Hospital beds (per 1,000 people)": 3.47, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 74.3531707317073, "Net migration": "-3645", "Real interest rate (%)": "7.00246757094131", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "234.385083606585"}, {"Country Name": "Mexico", "Year": "2015", "GDP per capita (current US$)": "10021.2386124039", "Hospital beds (per 1,000 people)": 1.0, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 74.431, "Net migration": "-291044", "Real interest rate (%)": "0.207059220867711", "Researchers in R&D (per million people)": "284.581146240234", "Secure Internet servers (per 1 million people)": "58.2627046023225"}, {"Country Name": "Micronesia, Fed. Sts.", "Year": "2015", "GDP per capita (current US$)": "2911.16211045292", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 65.306, "Net migration": "-1413", "Real interest rate (%)": "22.1112803322771", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "137.974171235145"}, {"Country Name": "Moldova", "Year": "2015", "GDP per capita (current US$)": "2749.55137054338", "Hospital beds (per 1,000 people)": 5.74, "Income share held by highest 10%": "22.5", "Life expectancy at birth, total (years)": 70.118, "Net migration": "-59399", "Real interest rate (%)": "2.30781538967562", "Researchers in R&D (per million people)": "946.482971191406", "Secure Internet servers (per 1 million people)": "127.292947970682"}, {"Country Name": "Monaco", "Year": "2015", "GDP per capita (current US$)": "170437.101188261", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 85.323, "Net migration": "939", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "5658.7860815627"}, {"Country Name": "Mongolia", "Year": "2015", "GDP per capita (current US$)": "3838.92126989984", "Hospital beds (per 1,000 people)": 7.33, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 70.810243902439, "Net migration": "4307", "Real interest rate (%)": "18.8380789952191", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "74.3343605791341"}, {"Country Name": "Montenegro", "Year": "2015", "GDP per capita (current US$)": "6491.19280618646", "Hospital beds (per 1,000 people)": 3.86, "Income share held by highest 10%": "27.7", "Life expectancy at birth, total (years)": 76.6024390243903, "Net migration": "-4863", "Real interest rate (%)": "6.56797930972674", "Researchers in R&D (per million people)": "830.629516601562", "Secure Internet servers (per 1 million people)": "94.4527424113625"}, {"Country Name": "Morocco", "Year": "2015", "GDP per capita (current US$)": "3146.24780273438", "Hospital beds (per 1,000 people)": 1.1, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 72.894, "Net migration": "-81248", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "9.47769026838854"}, {"Country Name": "Mozambique", "Year": "2015", "GDP per capita (current US$)": "610.563774706589", "Hospital beds (per 1,000 people)": 0.78, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 58.711, "Net migration": "-52374", "Real interest rate (%)": "7.2917553577128", "Researchers in R&D (per million people)": "44.4113616943359", "Secure Internet servers (per 1 million people)": "4.89686966476633"}, {"Country Name": "Myanmar", "Year": "2015", "GDP per capita (current US$)": "1166.73305546337", "Hospital beds (per 1,000 people)": 1.06, "Income share held by highest 10%": "31.7", "Life expectancy at birth, total (years)": 65.288, "Net migration": "-94108", "Real interest rate (%)": "11.3920487516415", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "1.07655150253706"}, {"Country Name": "Namibia", "Year": "2015", "GDP per capita (current US$)": "4774.10650865775", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "47.2", "Life expectancy at birth, total (years)": 60.008, "Net migration": "12755", "Real interest rate (%)": "5.25645278962166", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "61.4918081118645"}, {"Country Name": "Nauru", "Year": "2015", "GDP per capita (current US$)": "7703.43149943923", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 60.897, "Net migration": "-86", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": ".."}, {"Country Name": "Nepal", "Year": "2015", "GDP per capita (current US$)": "875.543635474862", "Hospital beds (per 1,000 people)": 0.25, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 67.374, "Net migration": "-221062", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "5.2832791869098"}, {"Country Name": "Netherlands", "Year": "2015", "GDP per capita (current US$)": "45793.8135434697", "Hospital beds (per 1,000 people)": 3.47, "Income share held by highest 10%": "23", "Life expectancy at birth, total (years)": 81.509756097561, "Net migration": "55585", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "4891.78125", "Secure Internet servers (per 1 million people)": "9728.85177813382"}, {"Country Name": "New Caledonia", "Year": "2015", "GDP per capita (current US$)": "30858.7237060533", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 77.206, "Net migration": "-2530", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "755.735111312013"}, {"Country Name": "New Zealand", "Year": "2015", "GDP per capita (current US$)": "38665.3723018158", "Hospital beds (per 1,000 people)": 2.72, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 81.6124390243903, "Net migration": "70870", "Real interest rate (%)": "4.23651039702901", "Researchers in R&D (per million people)": "5476.90380859375", "Secure Internet servers (per 1 million people)": "3921.11771597171"}, {"Country Name": "Nicaragua", "Year": "2015", "GDP per capita (current US$)": "2074.45620634731", "Hospital beds (per 1,000 people)": 0.9, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 72.899, "Net migration": "-24353", "Real interest rate (%)": "4.14902144592775", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "22.1159176552834"}, {"Country Name": "Niger", "Year": "2015", "GDP per capita (current US$)": "485.662574175279", "Hospital beds (per 1,000 people)": 0.26, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 58.85, "Net migration": "17051", "Real interest rate (%)": "2.84083767674412", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "0.300910283699219"}, {"Country Name": "Nigeria", "Year": "2015", "GDP per capita (current US$)": "2585.73360671797", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "26.9", "Life expectancy at birth, total (years)": 51.939, "Net migration": "-116162", "Real interest rate (%)": "13.5961532451283", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "3.37228545050571"}, {"Country Name": "North Macedonia", "Year": "2015", "GDP per capita (current US$)": "5262.68671928674", "Hospital beds (per 1,000 people)": 4.31, "Income share held by highest 10%": "24.8", "Life expectancy at birth, total (years)": 75.4024390243902, "Net migration": "-23010", "Real interest rate (%)": "5.3457581796468", "Researchers in R&D (per million people)": "897.163452148438", "Secure Internet servers (per 1 million people)": "124.971894396135"}, {"Country Name": "Northern Mariana Islands", "Year": "2015", "GDP per capita (current US$)": "17665.1007493109", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 77.36, "Net migration": "-1530", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "504.717164266025"}, {"Country Name": "Norway", "Year": "2015", "GDP per capita (current US$)": "74809.9658049898", "Hospital beds (per 1,000 people)": 3.76, "Income share held by highest 10%": "22.2", "Life expectancy at birth, total (years)": 82.3048780487805, "Net migration": "30242", "Real interest rate (%)": "6.4863764717603", "Researchers in R&D (per million people)": "5929.857421875", "Secure Internet servers (per 1 million people)": "4093.96973021853"}, {"Country Name": "Oman", "Year": "2015", "GDP per capita (current US$)": "18808.3077921839", "Hospital beds (per 1,000 people)": 1.19, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 79.346, "Net migration": "133842", "Real interest rate (%)": "29.7141921537162", "Researchers in R&D (per million people)": "222.386154174805", "Secure Internet servers (per 1 million people)": "118.760446797351"}, {"Country Name": "Pakistan", "Year": "2015", "GDP per capita (current US$)": "1380.47020838317", "Hospital beds (per 1,000 people)": 0.48, "Income share held by highest 10%": "27", "Life expectancy at birth, total (years)": 65.641, "Net migration": "-2172162", "Real interest rate (%)": "5.47083938915616", "Researchers in R&D (per million people)": "257.672882080078", "Secure Internet servers (per 1 million people)": "3.1294456104723"}, {"Country Name": "Palau", "Year": "2015", "GDP per capita (current US$)": "15690.759707372", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 69.07, "Net migration": "-11", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "168.823860438942"}, {"Country Name": "Panama", "Year": "2015", "GDP per capita (current US$)": "14082.6548502728", "Hospital beds (per 1,000 people)": 2.09, "Income share held by highest 10%": "39", "Life expectancy at birth, total (years)": 77.583, "Net migration": "8648", "Real interest rate (%)": "3.37836019068686", "Researchers in R&D (per million people)": "90.6830291748047", "Secure Internet servers (per 1 million people)": "307.32051610655"}, {"Country Name": "Papua New Guinea", "Year": "2015", "GDP per capita (current US$)": "2484.5963398603", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 64.473, "Net migration": "30580", "Real interest rate (%)": "10.087811319828", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "12.4667657755483"}, {"Country Name": "Paraguay", "Year": "2015", "GDP per capita (current US$)": "5879.33792308671", "Hospital beds (per 1,000 people)": 0.84, "Income share held by highest 10%": "36.7", "Life expectancy at birth, total (years)": 73.454, "Net migration": "-16834", "Real interest rate (%)": "17.8457424475867", "Researchers in R&D (per million people)": "199.865524291992", "Secure Internet servers (per 1 million people)": "43.9999136237858"}, {"Country Name": "Peru", "Year": "2015", "GDP per capita (current US$)": "6231.71150338894", "Hospital beds (per 1,000 people)": 1.58, "Income share held by highest 10%": "32.6", "Life expectancy at birth, total (years)": 75.732, "Net migration": "2421", "Real interest rate (%)": "13.0638220152775", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "46.3595293128809"}, {"Country Name": "Philippines", "Year": "2015", "GDP per capita (current US$)": "2909.85818010301", "Hospital beds (per 1,000 people)": 0.95, "Income share held by highest 10%": "34.9", "Life expectancy at birth, total (years)": 69.45, "Net migration": "-390702", "Real interest rate (%)": "6.34358648995616", "Researchers in R&D (per million people)": "103.173446655273", "Secure Internet servers (per 1 million people)": "20.3108843398923"}, {"Country Name": "Poland", "Year": "2015", "GDP per capita (current US$)": "12637.5220324406", "Hospital beds (per 1,000 people)": 6.54, "Income share held by highest 10%": "24.2", "Life expectancy at birth, total (years)": 77.4512195121951, "Net migration": "3887", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "2158.37841796875", "Secure Internet servers (per 1 million people)": "955.841788900726"}, {"Country Name": "Portugal", "Year": "2015", "GDP per capita (current US$)": "19215.7813014347", "Hospital beds (per 1,000 people)": 3.37, "Income share held by highest 10%": "27.3", "Life expectancy at birth, total (years)": 81.1243902439025, "Net migration": "-3209", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "3724.60009765625", "Secure Internet servers (per 1 million people)": "901.325690215055"}, {"Country Name": "Puerto Rico (US)", "Year": "2015", "GDP per capita (current US$)": "29242.041465085", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 80.677, "Net migration": "-42912", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "332.377777099609", "Secure Internet servers (per 1 million people)": "312.856507203196"}, {"Country Name": "Qatar", "Year": "2015", "GDP per capita (current US$)": "68985.2946961507", "Hospital beds (per 1,000 people)": 1.02, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 81.785, "Net migration": "177467", "Real interest rate (%)": "39.4893730514304", "Researchers in R&D (per million people)": "643.914001464844", "Secure Internet servers (per 1 million people)": "393.677782199366"}, {"Country Name": "Romania", "Year": "2015", "GDP per capita (current US$)": "8977.01748158196", "Hospital beds (per 1,000 people)": 6.76, "Income share held by highest 10%": "24.8", "Life expectancy at birth, total (years)": 74.9121951219512, "Net migration": "-35751", "Real interest rate (%)": "3.39222469611366", "Researchers in R&D (per million people)": "876.410095214844", "Secure Internet servers (per 1 million people)": "361.230253957283"}, {"Country Name": "Russian Federation", "Year": "2015", "GDP per capita (current US$)": "9277.7138671875", "Hospital beds (per 1,000 people)": 7.58, "Income share held by highest 10%": "26.8", "Life expectancy at birth, total (years)": 71.1834146341463, "Net migration": "384756", "Real interest rate (%)": "7.89459357479114", "Researchers in R&D (per million people)": "3096.02734375", "Secure Internet servers (per 1 million people)": "320.19338178608"}, {"Country Name": "Rwanda", "Year": "2015", "GDP per capita (current US$)": "733.998630392314", "Hospital beds (per 1,000 people)": 0.74, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 65.419, "Net migration": "-21862", "Real interest rate (%)": "16.7659340409904", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "7.21648120596336"}, {"Country Name": "Samoa", "Year": "2015", "GDP per capita (current US$)": "4084.36083819933", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 71.06, "Net migration": "-3074", "Real interest rate (%)": "5.33226059335482", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "123.896085874855"}, {"Country Name": "San Marino", "Year": "2015", "GDP per capita (current US$)": "43146.8240435428", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 84.596, "Net migration": "273", "Real interest rate (%)": "3.25650061989344", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "3404.56576587531"}, {"Country Name": "Sao Tome and Principe", "Year": "2015", "GDP per capita (current US$)": "1298.10946596396", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 66.023, "Net migration": "-1809", "Real interest rate (%)": "17.9918383362066", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "14.9782067092381"}, {"Country Name": "Saudi Arabia", "Year": "2015", "GDP per capita (current US$)": "23256.1549553531", "Hospital beds (per 1,000 people)": 2.12, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 77.776, "Net migration": "465292", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "95.1154972457758"}, {"Country Name": "Senegal", "Year": "2015", "GDP per capita (current US$)": "1218.00613555438", "Hospital beds (per 1,000 people)": 0.69, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 66.451, "Net migration": "34387", "Real interest rate (%)": "4.04115044114453", "Researchers in R&D (per million people)": "572.421325683594", "Secure Internet servers (per 1 million people)": "6.30424952329252"}, {"Country Name": "Serbia", "Year": "2015", "GDP per capita (current US$)": "5820.3215576888", "Hospital beds (per 1,000 people)": 5.27, "Income share held by highest 10%": "29.2", "Life expectancy at birth, total (years)": 75.2878048780488, "Net migration": "-18789", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "2060.14770507812", "Secure Internet servers (per 1 million people)": "141.077655709354"}, {"Country Name": "Seychelles", "Year": "2015", "GDP per capita (current US$)": "15333.1051727105", "Hospital beds (per 1,000 people)": 3.04, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 74.2951219512195, "Net migration": "1719", "Real interest rate (%)": "13.4967846311865", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "1006.2192915788"}, {"Country Name": "Sierra Leone", "Year": "2015", "GDP per capita (current US$)": "964.575980888989", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 55.454, "Net migration": "-356", "Real interest rate (%)": "14.5895088870658", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "0.994649496174507"}, {"Country Name": "Singapore", "Year": "2015", "GDP per capita (current US$)": "55645.6068614606", "Hospital beds (per 1,000 people)": 2.35, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 82.7439024390244, "Net migration": "41852", "Real interest rate (%)": "2.21015017142368", "Researchers in R&D (per million people)": "7134.93408203125", "Secure Internet servers (per 1 million people)": "3585.18388972579"}, {"Country Name": "Sint Maarten (Dutch part)", "Year": "2015", "GDP per capita (current US$)": "37839.6283815163", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 75.899, "Net migration": "536", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "640.495316377999"}, {"Country Name": "Slovak Republic", "Year": "2015", "GDP per capita (current US$)": "16442.0760860018", "Hospital beds (per 1,000 people)": 5.75, "Income share held by highest 10%": "20.9", "Life expectancy at birth, total (years)": 76.5634146341463, "Net migration": "2549", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "2658.90087890625", "Secure Internet servers (per 1 million people)": "1068.43890474595"}, {"Country Name": "Slovenia", "Year": "2015", "GDP per capita (current US$)": "20697.2748530619", "Hospital beds (per 1,000 people)": 4.48, "Income share held by highest 10%": "21", "Life expectancy at birth, total (years)": 80.7756097560976, "Net migration": "712", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "3836.5400390625", "Secure Internet servers (per 1 million people)": "2188.96638819577"}, {"Country Name": "Solomon Islands", "Year": "2015", "GDP per capita (current US$)": "2045.47889485251", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 69.323, "Net migration": "5853", "Real interest rate (%)": "6.88923548745031", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "20.3310838813603"}, {"Country Name": "Somalia", "Year": "2015", "GDP per capita (current US$)": "445.583080073396", "Hospital beds (per 1,000 people)": 0.87, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 55.056, "Net migration": "-17178", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "0.506990567005938"}, {"Country Name": "South Africa", "Year": "2015", "GDP per capita (current US$)": "6112.27382485974", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 64.053, "Net migration": "641150", "Real interest rate (%)": "3.66774283297157", "Researchers in R&D (per million people)": "466.560852050781", "Secure Internet servers (per 1 million people)": "266.326833603483"}, {"Country Name": "South Sudan", "Year": "2015", "GDP per capita (current US$)": "1080.14718624765", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 39.757, "Net migration": "-159822", "Real interest rate (%)": "-3.32140405501115", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "0"}, {"Country Name": "Spain", "Year": "2015", "GDP per capita (current US$)": "25982.4416197775", "Hospital beds (per 1,000 people)": 2.98, "Income share held by highest 10%": "26.2", "Life expectancy at birth, total (years)": 82.8317073170732, "Net migration": "-1979", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "2622.53295898438", "Secure Internet servers (per 1 million people)": "890.003238314135"}, {"Country Name": "Sri Lanka", "Year": "2015", "GDP per capita (current US$)": "4057.7158346231", "Hospital beds (per 1,000 people)": 3.78, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 75.99, "Net migration": "-29797", "Real interest rate (%)": "3.82773664325456", "Researchers in R&D (per million people)": "102.401512145996", "Secure Internet servers (per 1 million people)": "20.9346685741536"}, {"Country Name": "St. Kitts and Nevis", "Year": "2015", "GDP per capita (current US$)": "20328.8003530109", "Hospital beds (per 1,000 people)": 5.0, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 71.211, "Net migration": "-202", "Real interest rate (%)": "9.46794094711364", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "807.016798691783"}, {"Country Name": "St. Lucia", "Year": "2015", "GDP per capita (current US$)": "10334.9860823918", "Hospital beds (per 1,000 people)": 1.42, "Income share held by highest 10%": "34.1", "Life expectancy at birth, total (years)": 72.932, "Net migration": "-69", "Real interest rate (%)": "5.44260143413081", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "142.934735999543"}, {"Country Name": "St. Martin (French part)", "Year": "2015", "GDP per capita (current US$)": "..", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 79.829, "Net migration": "-731", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "107.040595145709"}, {"Country Name": "St. Vincent and the Grenadines", "Year": "2015", "GDP per capita (current US$)": "7353.73556054184", "Hospital beds (per 1,000 people)": 4.45, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 70.463, "Net migration": "-1124", "Real interest rate (%)": "10.1087169927819", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "121.540762902019"}, {"Country Name": "Sudan", "Year": "2015", "GDP per capita (current US$)": "1292.37963867188", "Hospital beds (per 1,000 people)": 0.67, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 64.375, "Net migration": "66476", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "0.724557458418335"}, {"Country Name": "Suriname", "Year": "2015", "GDP per capita (current US$)": "8813.61705392067", "Hospital beds (per 1,000 people)": 2.93, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 70.567, "Net migration": "-967", "Real interest rate (%)": "7.40270503379035", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "103.158897368932"}, {"Country Name": "Sweden", "Year": "2015", "GDP per capita (current US$)": "51197.9529341175", "Hospital beds (per 1,000 people)": 2.43, "Income share held by highest 10%": "22.9", "Life expectancy at birth, total (years)": 82.2048780487805, "Net migration": "80534", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "6846.13427734375", "Secure Internet servers (per 1 million people)": "4207.90053377903"}, {"Country Name": "Switzerland", "Year": "2015", "GDP per capita (current US$)": "83806.4476003837", "Hospital beds (per 1,000 people)": 4.73, "Income share held by highest 10%": "25.2", "Life expectancy at birth, total (years)": 82.8975609756098, "Net migration": "71876", "Real interest rate (%)": "3.99644751609541", "Researchers in R&D (per million people)": "5308.73291015625", "Secure Internet servers (per 1 million people)": "6938.08892982176"}, {"Country Name": "Syrian Arab Republic", "Year": "2015", "GDP per capita (current US$)": "847.731631942565", "Hospital beds (per 1,000 people)": 1.47, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 63.265, "Net migration": "-827496", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "83.0484924316406", "Secure Internet servers (per 1 million people)": "2.2651668104876"}, {"Country Name": "Tajikistan", "Year": "2015", "GDP per capita (current US$)": "956.916310930656", "Hospital beds (per 1,000 people)": 4.58, "Income share held by highest 10%": "26.4", "Life expectancy at birth, total (years)": 69.665, "Net migration": "-7660", "Real interest rate (%)": "17.7511693755864", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "4.97464090034059"}, {"Country Name": "Tanzania", "Year": "2015", "GDP per capita (current US$)": "939.127319335938", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 63.928, "Net migration": "201495", "Real interest rate (%)": "7.91293618587464", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "3.24869040291873"}, {"Country Name": "Thailand", "Year": "2015", "GDP per capita (current US$)": "5688.85335397884", "Hospital beds (per 1,000 people)": 2.14, "Income share held by highest 10%": "28.4", "Life expectancy at birth, total (years)": 76.563, "Net migration": "32500", "Real interest rate (%)": "3.98101397309843", "Researchers in R&D (per million people)": "844.080749511719", "Secure Internet servers (per 1 million people)": "67.5920933411652"}, {"Country Name": "Timor-Leste", "Year": "2015", "GDP per capita (current US$)": "1319.59297370991", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 65.326, "Net migration": "-20", "Real interest rate (%)": "5.87106345239979", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "9.12763840611519"}, {"Country Name": "Togo", "Year": "2015", "GDP per capita (current US$)": "751.052405084336", "Hospital beds (per 1,000 people)": 0.65, "Income share held by highest 10%": "31.5", "Life expectancy at birth, total (years)": 59.22, "Net migration": "-1976", "Real interest rate (%)": "2.88784451733368", "Researchers in R&D (per million people)": "34.9685707092285", "Secure Internet servers (per 1 million people)": "2.87086522005508"}, {"Country Name": "Tonga", "Year": "2015", "GDP per capita (current US$)": "4123.90347238813", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "26.8", "Life expectancy at birth, total (years)": 71.851, "Net migration": "-2610", "Real interest rate (%)": "2.884809640574", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "103.680663556247"}, {"Country Name": "Trinidad and Tobago", "Year": "2015", "GDP per capita (current US$)": "19887.2337359338", "Hospital beds (per 1,000 people)": 2.38, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 72.882, "Net migration": "-575", "Real interest rate (%)": "18.7101935222371", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "273.400772190474"}, {"Country Name": "Tunisia", "Year": "2015", "GDP per capita (current US$)": "4014.94773686432", "Hospital beds (per 1,000 people)": 1.77, "Income share held by highest 10%": "25.6", "Life expectancy at birth, total (years)": 74.875, "Net migration": "-25229", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "1774.94543457031", "Secure Internet servers (per 1 million people)": "18.7682025253932"}, {"Country Name": "Turkiye", "Year": "2015", "GDP per capita (current US$)": "11049.9951100942", "Hospital beds (per 1,000 people)": 2.63, "Income share held by highest 10%": "33.5", "Life expectancy at birth, total (years)": 76.539, "Net migration": "1063140", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "1136.18029785156", "Secure Internet servers (per 1 million people)": "364.977692803257"}, {"Country Name": "Turkmenistan", "Year": "2015", "GDP per capita (current US$)": "5759.497903834", "Hospital beds (per 1,000 people)": 4.25, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 69.061, "Net migration": "9936", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "1.93057336420106"}, {"Country Name": "Turks and Caicos Islands", "Year": "2015", "GDP per capita (current US$)": "25736.101625461", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 77.321, "Net migration": "1658", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "819.560169375768"}, {"Country Name": "Tuvalu", "Year": "2015", "GDP per capita (current US$)": "3357.83417700071", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 65.365, "Net migration": "-179", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": ".."}, {"Country Name": "Uganda", "Year": "2015", "GDP per capita (current US$)": "862.934610355811", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 63.831, "Net migration": "-62366", "Real interest rate (%)": "16.5546646041457", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "3.03745291348487"}, {"Country Name": "Ukraine", "Year": "2015", "GDP per capita (current US$)": "2094.47387695313", "Hospital beds (per 1,000 people)": 7.4, "Income share held by highest 10%": "21.6", "Life expectancy at birth, total (years)": 72.686, "Net migration": "-21992", "Real interest rate (%)": "-12.2829289815693", "Researchers in R&D (per million people)": "1005.99719238281", "Secure Internet servers (per 1 million people)": "139.849613287316"}, {"Country Name": "United Arab Emirates", "Year": "2015", "GDP per capita (current US$)": "43534.9972694631", "Hospital beds (per 1,000 people)": 1.39, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 82.076, "Net migration": "342468", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "2168.42724609375", "Secure Internet servers (per 1 million people)": "638.900479786748"}, {"Country Name": "United Kingdom", "Year": "2015", "GDP per capita (current US$)": "44983.885522934", "Hospital beds (per 1,000 people)": 2.61, "Income share held by highest 10%": "25.3", "Life expectancy at birth, total (years)": 80.9560975609756, "Net migration": "347839", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "4389.5625", "Secure Internet servers (per 1 million people)": "4388.16678957719"}, {"Country Name": "United States", "Year": "2015", "GDP per capita (current US$)": "56849.4697923159", "Hospital beds (per 1,000 people)": 2.77, "Income share held by highest 10%": "30.2", "Life expectancy at birth, total (years)": 78.690243902439, "Net migration": "1722127", "Real interest rate (%)": "2.31051464203483", "Researchers in R&D (per million people)": "3858.04028320312", "Secure Internet servers (per 1 million people)": "6337.61084209589"}, {"Country Name": "Uruguay", "Year": "2015", "GDP per capita (current US$)": "17125.9016800298", "Hospital beds (per 1,000 people)": 2.45, "Income share held by highest 10%": "29.8", "Life expectancy at birth, total (years)": 77.285, "Net migration": "-4157", "Real interest rate (%)": "5.44867158636638", "Researchers in R&D (per million people)": "687.092041015625", "Secure Internet servers (per 1 million people)": "188.53824075116"}, {"Country Name": "Uzbekistan", "Year": "2015", "GDP per capita (current US$)": "2803.19018021751", "Hospital beds (per 1,000 people)": 4.19, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 71.33, "Net migration": "-16545", "Real interest rate (%)": "2.96202955466901", "Researchers in R&D (per million people)": "504.736877441406", "Secure Internet servers (per 1 million people)": "5.75621998594702"}, {"Country Name": "Vanuatu", "Year": "2015", "GDP per capita (current US$)": "2854.89412272653", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 70.163, "Net migration": "-1324", "Real interest rate (%)": "3.92751240462603", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "127.771034306523"}, {"Country Name": "Venezuela, RB", "Year": "2015", "GDP per capita (current US$)": "..", "Hospital beds (per 1,000 people)": 0.75, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 73.004, "Net migration": "-77417", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "246.150543212891", "Secure Internet servers (per 1 million people)": "21.0963757015281"}, {"Country Name": "Viet Nam", "Year": "2015", "GDP per capita (current US$)": "2577.56885340113", "Hospital beds (per 1,000 people)": 2.53, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 73.955, "Net migration": "-4888", "Real interest rate (%)": "8.98829687567201", "Researchers in R&D (per million people)": "681.681640625", "Secure Internet servers (per 1 million people)": "32.6750018912287"}, {"Country Name": "Virgin Islands (U.S.)", "Year": "2015", "GDP per capita (current US$)": "34007.3529411765", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 79.0170731707317, "Net migration": "-2432", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "529.188948306595"}, {"Country Name": "West Bank and Gaza", "Year": "2015", "GDP per capita (current US$)": "3272.15432360708", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 74.577, "Net migration": "-22903", "Real interest rate (%)": "10.8929228684251", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "32.5519918540397"}, {"Country Name": "Yemen, Rep.", "Year": "2015", "GDP per capita (current US$)": "1362.17381205593", "Hospital beds (per 1,000 people)": 0.71, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 66.761, "Net migration": "-9883", "Real interest rate (%)": "..", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "1.18744343396574"}, {"Country Name": "Zambia", "Year": "2015", "GDP per capita (current US$)": "1295.87788680068", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "43.4", "Life expectancy at birth, total (years)": 60.728, "Net migration": "16261", "Real interest rate (%)": "6.17921585248158", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "5.48810973585179"}, {"Country Name": "Zimbabwe", "Year": "2015", "GDP per capita (current US$)": "1386.41855927575", "Hospital beds (per 1,000 people)": null, "Income share held by highest 10%": "..", "Life expectancy at birth, total (years)": 58.989, "Net migration": "-162220", "Real interest rate (%)": "7.8864929381481", "Researchers in R&D (per million people)": "..", "Secure Internet servers (per 1 million people)": "11.2507711466057"}]}}, {"mode": "vega-lite"});
+</script>
+</div>
+</div>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
