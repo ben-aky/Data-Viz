@@ -1,4 +1,4 @@
-# Data-Viz
+# Data Visualization Assignments
 A collection of assignments from the Data Visualization course at GWU. <br />
 
 
